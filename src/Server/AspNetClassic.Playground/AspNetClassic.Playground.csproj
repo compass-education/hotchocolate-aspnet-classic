@@ -26,12 +26,4 @@
     <ProjectReference Include="..\AspNetClassic.Abstractions\AspNetClassic.Abstractions.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Remove="..\AspNetCore.Playground\**\*.css;..\AspNetCore.Playground\**\*.html;..\AspNetCore.Playground\**\*.js;..\AspNetCore.Playground\**\*.png" />
-    <EmbeddedResource Include="..\AspNetCore.Playground\**\*.css;..\AspNetCore.Playground\**\*.html;..\AspNetCore.Playground\**\*.js;..\AspNetCore.Playground\**\*.png" />
-    <Compile Include="..\AspNetCore.Playground\**\*.cs" Exclude="..\AspNetCore.Playground\bin\**\*.cs;..\AspNetCore.Playground\obj\**\*.cs" />
-    <EmbeddedResource Remove="..\AspNetCore.Playground\Resources\**" />
-    <Compile Remove="..\AspNetCore.Playground\Resources\**" />
-  </ItemGroup>
-
 </Project>

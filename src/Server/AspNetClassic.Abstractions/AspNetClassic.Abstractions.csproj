@@ -21,15 +21,4 @@
     <PackageReference Include="Microsoft.Owin" Version="4.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\Core\Core\Core.csproj" />
-    <ProjectReference Include="..\..\Server\Server\Server.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="..\AspNetCore.Abstractions\**\*.cs" Exclude="&#xA;          ..\AspNetCore.Abstractions\bin\**\*.cs;&#xA;          ..\AspNetCore.Abstractions\obj\**\*.cs" />
-    <Compile Remove="..\AspNetCore.Abstractions\Extensions\**" />
-    <Compile Remove="..\AspNetCore.Abstractions\Interceptors\**" />
-  </ItemGroup>
-
 </Project>

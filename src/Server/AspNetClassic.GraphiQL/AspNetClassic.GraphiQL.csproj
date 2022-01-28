@@ -18,24 +18,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="..\AspNetCore.GraphiQL\**\*.css;..\AspNetCore.GraphiQL\**\*.html;..\AspNetCore.GraphiQL\**\*.js" />
-    <EmbeddedResource Include="..\AspNetCore.GraphiQL\**\*.css;..\AspNetCore.GraphiQL\**\*.html;..\AspNetCore.GraphiQL\**\*.js" />
-    <Compile Include="..\AspNetCore.GraphiQL\**\*.cs" Exclude="..\AspNetCore.GraphiQL\bin\**\*.cs;..\AspNetCore.GraphiQL\obj\**\*.cs" />
-    <EmbeddedResource Remove="..\AspNetCore.GraphiQL\Resources\**" />
-    <Compile Remove="..\AspNetCore.GraphiQL\Resources\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.Owin" Version="4.0.0" />
     <PackageReference Include="Microsoft.Owin.StaticFiles" Version="4.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\AspNetClassic.Abstractions\AspNetClassic.Abstractions.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\Core\Core\Core.csproj" />
   </ItemGroup>
 
 </Project>

@@ -18,6 +18,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="HotChocolate" Version="10.5.5" />
+    <PackageReference Include="HotChocolate.Types" Version="10.5.5" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.1" />
   </ItemGroup>
 
@@ -27,10 +29,6 @@
     <ProjectReference Include="..\AspNetClassic.HttpGet\AspNetClassic.HttpGet.csproj" />
     <ProjectReference Include="..\AspNetClassic.HttpGetSchema\AspNetClassic.HttpGetSchema.csproj" />
     <ProjectReference Include="..\AspNetClassic.HttpPost\AspNetClassic.HttpPost.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="..\AspNetCore\**\*.cs" Exclude="&#xA;        ..\AspNetCore\**\ApplicationBuilderExtensions.cs;&#xA;        ..\AspNetCore\bin\**\*.cs;&#xA;        ..\AspNetCore\obj\**\*.cs" />
   </ItemGroup>
 
 </Project>

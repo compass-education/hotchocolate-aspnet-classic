@@ -34,13 +34,4 @@
     <ProjectReference Include="..\..\src\Server\AspNetClassic.GraphiQL\AspNetClassic.GraphiQL.csproj" />
     <ProjectReference Include="..\..\src\Server\AspNetClassic.Playground\AspNetClassic.Playground.csproj" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="..\AspNetCore.StarWars\**\*.cs" Exclude="..\AspNetCore.StarWars\bin\**\*.cs;..\AspNetCore.StarWars\obj\**\*.cs;..\AspNetCore.StarWars\Program.cs;..\AspNetCore.StarWars\Startup.cs;" />
-    <Compile Remove="..\AspNetCore.StarWars\Data\**" />
-    <Compile Remove="..\AspNetCore.StarWars\Models\**" />
-    <Compile Remove="..\AspNetCore.StarWars\Resolvers\**" />
-    <Compile Remove="..\AspNetCore.StarWars\Types\**" />
-  </ItemGroup>
-
 </Project>
