@@ -20,6 +20,7 @@ namespace HotChocolate.AspNetClassic
             services.AddGraphQL(sp => SchemaBuilder.New()
                 .AddServices(sp)
                 .AddStarWarsTypes()
+                .AddAuthorizeDirectiveType()
                 .AddDirectiveType<ExportDirectiveType>()
                 .Create());
 
