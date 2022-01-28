@@ -18,17 +18,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="HotChocolate" Version="10.5.5" />
-    <PackageReference Include="HotChocolate.Types" Version="10.5.5" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.1" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\AspNetClassic.Authorization\AspNetClassic.Authorization.csproj" />
     <ProjectReference Include="..\AspNetClassic.Abstractions\AspNetClassic.Abstractions.csproj" />
     <ProjectReference Include="..\AspNetClassic.HttpGet\AspNetClassic.HttpGet.csproj" />
     <ProjectReference Include="..\AspNetClassic.HttpGetSchema\AspNetClassic.HttpGetSchema.csproj" />
     <ProjectReference Include="..\AspNetClassic.HttpPost\AspNetClassic.HttpPost.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HotChocolate" Version="12.6.0" />
   </ItemGroup>
 
 </Project>
