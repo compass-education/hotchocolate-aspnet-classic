@@ -1,5 +1,0 @@
-﻿type Type {
-
-}
-
-union Union = Type
