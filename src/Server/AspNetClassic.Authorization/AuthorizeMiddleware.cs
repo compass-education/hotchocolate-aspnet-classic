@@ -5,7 +5,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Security.Principal;
 using System.Threading.Tasks;
-using HotChocolate.AspNetCore.Authorization.Properties;
+using HotChocolate.AspNetClassic.Authorization.Properties;
 using HotChocolate.Execution;
 using HotChocolate.Resolvers;
 

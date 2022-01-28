@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HotChocolate.AspNetCore.Authorization.Properties {
+namespace HotChocolate.AspNetClassic.Authorization.Properties {
     using System;
-    
-    
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,15 +23,15 @@ namespace HotChocolate.AspNetCore.Authorization.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class AuthResources {
-        
+
         private static global::System.Resources.ResourceManager resourceMan;
-        
+
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal AuthResources() {
         }
-        
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -39,13 +39,13 @@ namespace HotChocolate.AspNetCore.Authorization.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("HotChocolate.AspNetCore.Authorization.Properties.AuthResources", typeof(AuthResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("HotChocolate.AspNetClassic.Authorization.Properties.AuthResources", typeof(AuthResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-        
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
@@ -59,7 +59,7 @@ namespace HotChocolate.AspNetCore.Authorization.Properties {
                 resourceCulture = value;
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The default authorization policy does not exist..
         /// </summary>
@@ -68,7 +68,7 @@ namespace HotChocolate.AspNetCore.Authorization.Properties {
                 return ResourceManager.GetString("AuthorizeMiddleware_NoDefaultPolicy", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The current user is not authorized to access this resource..
         /// </summary>
@@ -77,7 +77,7 @@ namespace HotChocolate.AspNetCore.Authorization.Properties {
                 return ResourceManager.GetString("AuthorizeMiddleware_NotAuthorized", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The `{0}` authorization policy does not exist..
         /// </summary>
