@@ -3,10 +3,10 @@ using Microsoft.Extensions.DependencyInjection;
 using HotChocolate.Execution.Configuration;
 using HotChocolate.Execution;
 using HotChocolate.Configuration;
-using HotChocolate.Server;
 using HotChocolate.Execution.Batching;
 using HotChocolate.Types.Relay;
 using HotChocolate.AspNetClassic.Interceptors;
+using HotChocolate.AspNetClassic.Server;
 using HttpContext = Microsoft.Owin.IOwinContext;
 
 namespace HotChocolate

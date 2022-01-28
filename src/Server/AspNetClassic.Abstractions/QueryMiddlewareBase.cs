@@ -1,9 +1,9 @@
 using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using HotChocolate.AspNetClassic.Server;
 using Microsoft.Extensions.DependencyInjection;
 using HotChocolate.Execution;
-using HotChocolate.Server;
 using HotChocolate.Language;
 using Microsoft.Owin;
 using HttpContext = Microsoft.Owin.IOwinContext;

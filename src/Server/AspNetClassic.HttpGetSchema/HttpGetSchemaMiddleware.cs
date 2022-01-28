@@ -1,8 +1,8 @@
 using System;
 using System.IO;
 using System.Threading.Tasks;
+using HotChocolate.AspNetClassic.Server;
 using HotChocolate.Execution;
-using HotChocolate.Server;
 using Microsoft.Owin;
 using HttpContext = Microsoft.Owin.IOwinContext;
 using HttpResponse = Microsoft.Owin.IOwinResponse;

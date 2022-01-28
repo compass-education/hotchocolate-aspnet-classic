@@ -5,10 +5,9 @@ using System.IO;
 using System.Threading.Tasks;
 using HotChocolate.Execution;
 using HotChocolate.Language;
-using HotChocolate.Server;
 using HotChocolate.Execution.Batching;
 using System.Text;
-
+using HotChocolate.AspNetClassic.Server;
 using HttpContext = Microsoft.Owin.IOwinContext;
 using RequestDelegate = Microsoft.Owin.OwinMiddleware;
 
