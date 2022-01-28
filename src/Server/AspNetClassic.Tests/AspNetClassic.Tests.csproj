@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\examples\AspNetClassic.StarWars\AspNetClassic.StarWars.csproj" />
     <ProjectReference Include="..\..\Core\StarWars\StarWars.csproj" />
     <ProjectReference Include="..\..\Core\Subscriptions.InMemory\Subscriptions.InMemory.csproj" />
     <ProjectReference Include="..\AspNetClassic.Authorization\AspNetClassic.Authorization.csproj" />

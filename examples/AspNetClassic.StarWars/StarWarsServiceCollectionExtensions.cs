@@ -1,7 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
-using HotChocolate.StarWars.Data;
+using StarWars.Data;
 
-namespace HotChocolate.StarWars
+namespace StarWars
 {
     public static class StarWarsServiceCollectionExtensions
     {

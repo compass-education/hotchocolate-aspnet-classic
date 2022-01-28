@@ -1,6 +1,7 @@
-using HotChocolate.StarWars.Types;
+using HotChocolate;
+using StarWars.Types;
 
-namespace HotChocolate.StarWars
+namespace StarWars
 {
     public static class SchemaBuilderExtensions
     {

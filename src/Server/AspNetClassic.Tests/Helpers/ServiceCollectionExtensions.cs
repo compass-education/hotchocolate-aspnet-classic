@@ -1,7 +1,7 @@
 using HotChocolate.Execution.Batching;
-using HotChocolate.StarWars;
 using HotChocolate.Subscriptions;
 using Microsoft.Extensions.DependencyInjection;
+using StarWars;
 
 namespace HotChocolate.AspNetClassic
 {
