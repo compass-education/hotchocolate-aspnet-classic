@@ -23,7 +23,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="HotChocolate.Subscriptions" Version="10.5.5" />
+    <PackageReference Include="HotChocolate.Subscriptions" Version="12.6.0" />
+    <PackageReference Include="HotChocolate.Subscriptions.InMemory" Version="12.6.0" />
     <PackageReference Include="Microsoft.AspNet.WebApi.OwinSelfHost" Version="5.2.7" />
   </ItemGroup>
 

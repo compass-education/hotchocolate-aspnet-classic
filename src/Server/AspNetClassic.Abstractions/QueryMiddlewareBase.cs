@@ -93,7 +93,7 @@ namespace HotChocolate.AspNetClassic
                         .Build();
                     ErrorHandler.Handle(error);
 
-                    var errorResult = QueryResult.CreateError(error);
+                    var errorResult = QueryResultBuilder.CreateError(error);
 
                     SetResponseHeaders(context.Response, _serializer.ContentType);
                     await _serializer.SerializeAsync(errorResult, context.Response.Body)
@@ -101,7 +101,7 @@ namespace HotChocolate.AspNetClassic
                 }
                 catch (QueryException ex)
                 {
-                    var errorResult = QueryResult.CreateError(
+                    var errorResult = QueryResultBuilder.CreateError(
                         ErrorHandler.Handle(ex.Errors));
                     SetResponseHeaders(context.Response, _serializer.ContentType);
                     await _serializer.SerializeAsync(errorResult, context.Response.Body)

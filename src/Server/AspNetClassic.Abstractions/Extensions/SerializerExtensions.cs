@@ -17,16 +17,16 @@ namespace HotChocolate.AspNetClassic
         {
             if (result is IReadOnlyQueryResult queryResult)
             {
-                return serializer.SerializeAsync(
+                return new ValueTask(serializer.SerializeAsync(
                     queryResult,
                     outputStream,
-                    cancellationToken);
+                    cancellationToken));
             }
             else
             {
                 // TODO : resources
                 return serializer.SerializeAsync(
-                    QueryResult.CreateError(
+                    QueryResultBuilder.CreateError(
                         ErrorBuilder.New()
                             .SetMessage("Result type not supported.")
                             .SetCode(ErrorCodes.Serialization.ResultTypeNotSupported)
