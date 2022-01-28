@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
 using System.Security.Principal;
 using System.Threading.Tasks;
 using HotChocolate.AspNetClassic.Authorization.Properties;
-using HotChocolate.Execution;
 using HotChocolate.Resolvers;
 
 namespace HotChocolate.AspNetClassic.Authorization

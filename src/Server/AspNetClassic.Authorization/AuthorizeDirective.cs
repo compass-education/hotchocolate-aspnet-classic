@@ -1,11 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Runtime.Serialization;
 using HotChocolate.Language;
-using HotChocolate.Types;
-using HotChocolate.Types.Descriptors;
 
 namespace HotChocolate.AspNetClassic.Authorization
 {
