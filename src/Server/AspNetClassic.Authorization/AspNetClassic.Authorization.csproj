@@ -18,10 +18,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\Core\Core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="HotChocolate.Abstractions" Version="10.5.5" />
     <PackageReference Include="HotChocolate.Language" Version="10.5.5" />
     <PackageReference Include="HotChocolate.Types" Version="10.5.5" />
