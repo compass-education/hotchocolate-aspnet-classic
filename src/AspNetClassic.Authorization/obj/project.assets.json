@@ -1514,11 +1514,11 @@
   "project": {
     "version": "0.0.0",
     "restore": {
-      "projectUniqueName": "C:\\src\\hotchocolate-aspnetclassic-fromv12\\src\\AspNetClassic.Authorization\\HotChocolate.AspNetClassic.Authorization.csproj",
+      "projectUniqueName": "C:\\src\\hotchocolate-aspnet-classic\\src\\AspNetClassic.Authorization\\HotChocolate.AspNetClassic.Authorization.csproj",
       "projectName": "HotChocolate.AspNetClassic.Authorization",
-      "projectPath": "C:\\src\\hotchocolate-aspnetclassic-fromv12\\src\\AspNetClassic.Authorization\\HotChocolate.AspNetClassic.Authorization.csproj",
+      "projectPath": "C:\\src\\hotchocolate-aspnet-classic\\src\\AspNetClassic.Authorization\\HotChocolate.AspNetClassic.Authorization.csproj",
       "packagesPath": "C:\\Users\\ksteele\\.nuget\\packages\\",
-      "outputPath": "C:\\src\\hotchocolate-aspnetclassic-fromv12\\src\\AspNetClassic.Authorization\\obj\\",
+      "outputPath": "C:\\src\\hotchocolate-aspnet-classic\\src\\AspNetClassic.Authorization\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [

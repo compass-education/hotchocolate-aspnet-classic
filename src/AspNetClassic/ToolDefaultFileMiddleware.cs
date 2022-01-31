@@ -1,5 +1,8 @@
 using Microsoft.Owin;
 
+using HttpContext = Microsoft.Owin.IOwinContext;
+using HttpRequest = Microsoft.Owin.IOwinRequest;
+
 namespace HotChocolate.AspNetClassic;
 
 /// <summary>

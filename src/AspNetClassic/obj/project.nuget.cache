@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yPL56jPAdqmQ1ysNffyceci06oJfuHaFrZQ8dY9jZmA/espsoNck9sIWDbPl5wH/rITAHIjHdfkZIicHTx90UQ==",
+  "dgSpecHash": "d8K3oj3kqIxha5BnkpxFUPrIrqacZ7tSq7M2Ay+vmZx1qgJW/encOsRiHA5c92uUuAwuOjZOD+KnHMfjBm7/Xw==",
   "success": true,
-  "projectFilePath": "C:\\src\\hotchocolate-aspnetclassic-fromv12\\src\\AspNetClassic\\HotChocolate.AspNetClassic.csproj",
+  "projectFilePath": "C:\\src\\hotchocolate-aspnet-classic\\src\\AspNetClassic\\HotChocolate.AspNetClassic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ksteele\\.nuget\\packages\\greendonut\\12.6.0\\greendonut.12.6.0.nupkg.sha512",
     "C:\\Users\\ksteele\\.nuget\\packages\\hotchocolate\\12.6.0\\hotchocolate.12.6.0.nupkg.sha512",

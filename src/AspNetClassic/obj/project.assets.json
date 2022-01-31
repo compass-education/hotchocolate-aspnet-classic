@@ -1941,11 +1941,11 @@
   "project": {
     "version": "0.0.0",
     "restore": {
-      "projectUniqueName": "C:\\src\\hotchocolate-aspnetclassic-fromv12\\src\\AspNetClassic\\HotChocolate.AspNetClassic.csproj",
+      "projectUniqueName": "C:\\src\\hotchocolate-aspnet-classic\\src\\AspNetClassic\\HotChocolate.AspNetClassic.csproj",
       "projectName": "HotChocolate.AspNetClassic",
-      "projectPath": "C:\\src\\hotchocolate-aspnetclassic-fromv12\\src\\AspNetClassic\\HotChocolate.AspNetClassic.csproj",
+      "projectPath": "C:\\src\\hotchocolate-aspnet-classic\\src\\AspNetClassic\\HotChocolate.AspNetClassic.csproj",
       "packagesPath": "C:\\Users\\ksteele\\.nuget\\packages\\",
-      "outputPath": "C:\\src\\hotchocolate-aspnetclassic-fromv12\\src\\AspNetClassic\\obj\\",
+      "outputPath": "C:\\src\\hotchocolate-aspnet-classic\\src\\AspNetClassic\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [

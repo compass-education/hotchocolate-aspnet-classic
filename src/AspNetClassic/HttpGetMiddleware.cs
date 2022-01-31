@@ -39,7 +39,7 @@ public sealed class HttpGetMiddleware : MiddlewareBase
         {
             if (!IsDefaultSchema)
             {
-                context.Items[WellKnownContextData.SchemaName] = SchemaName.Value;
+                context.Environment[WellKnownContextData.SchemaName] = SchemaName.Value;
             }
 
             using (_diagnosticEvents.ExecuteHttpRequest(context, HttpRequestKind.HttpGet))
@@ -58,10 +58,10 @@ public sealed class HttpGetMiddleware : MiddlewareBase
     private async Task HandleRequestAsync(HttpContext context)
     {
         // first we need to get the request executor to be able to execute requests.
-        IRequestExecutor requestExecutor = await GetExecutorAsync(context.RequestAborted);
+        IRequestExecutor requestExecutor = await GetExecutorAsync(context.Request.CallCancelled);
         IHttpRequestInterceptor requestInterceptor = requestExecutor.GetRequestInterceptor();
         IErrorHandler errorHandler = requestExecutor.GetErrorHandler();
-        context.Items[WellKnownContextData.RequestExecutor] = requestExecutor;
+        context.Environment[WellKnownContextData.RequestExecutor] = requestExecutor;
 
         HttpStatusCode? statusCode = null;
         IExecutionResult? result;
@@ -129,7 +129,7 @@ HANDLE_RESULT:
         {
             // if cancellation is requested we will not try to attempt to write the result to the 
             // response stream.
-            if (context.RequestAborted.IsCancellationRequested)
+            if (context.Request.CallCancelled.IsCancellationRequested)
             {
                 return;
             }
@@ -143,7 +143,7 @@ HANDLE_RESULT:
                 formatScope = _diagnosticEvents.FormatHttpResponse(context, queryResult);
             }
 
-            await WriteResultAsync(context.Response, result, statusCode, context.RequestAborted);
+            await WriteResultAsync(context.Response, result, statusCode, context.Request.CallCancelled);
         }
         finally
         {

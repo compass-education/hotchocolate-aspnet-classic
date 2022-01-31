@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MhblxpGRydSpF0Tsx9xg2A7zz/L4gqlny4Qdvuf+5zBmbVmSczqjtDq1KM1AWPD/iRSwmGDZEBwY2vOzb8/T2Q==",
+  "dgSpecHash": "eWvF/Bf1D3+hQmwRxN0bsqYPwKxLkdKt1bpbBzfVf+d54ZuTEH7KxKBlp7Ia1c5h+eULUPyfL2z5wl7/sn4/pg==",
   "success": false,
-  "projectFilePath": "C:\\src\\hotchocolate-aspnetclassic-fromv12\\src\\AspNetClassic.Authorization\\HotChocolate.AspNetClassic.Authorization.csproj",
+  "projectFilePath": "C:\\src\\hotchocolate-aspnet-classic\\src\\AspNetClassic.Authorization\\HotChocolate.AspNetClassic.Authorization.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ksteele\\.nuget\\packages\\greendonut\\12.6.0\\greendonut.12.6.0.nupkg.sha512",
     "C:\\Users\\ksteele\\.nuget\\packages\\hotchocolate.abstractions\\12.6.0\\hotchocolate.abstractions.12.6.0.nupkg.sha512",

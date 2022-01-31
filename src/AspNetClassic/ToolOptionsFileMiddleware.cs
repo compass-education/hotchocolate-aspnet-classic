@@ -64,7 +64,7 @@ public class ToolOptionsFileMiddleware
                 _config = config;
             }
 
-            await context.Response.WriteAsJsonAsync(_config, context.RequestAborted);
+            await context.Response.WriteAsJsonAsync(_config, context.Request.CallCancelled);
         }
         else
         {
@@ -79,9 +79,9 @@ public class ToolOptionsFileMiddleware
         {
             var result = new Dictionary<string, string>();
 
-            foreach ((var key, StringValues value) in httpHeaders)
+            foreach (var httpHeader in httpHeaders)
             {
-                result.Add(key, value.ToString());
+                result.Add(httpHeader.Key, httpHeader.Value.ToString());
             }
 
             return result;

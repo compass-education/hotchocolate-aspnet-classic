@@ -4,6 +4,7 @@ using HotChocolate.AspNetClassic.Serialization;
 using HotChocolate.AspNetClassic.Subscriptions;
 
 using HttpContext = Microsoft.Owin.IOwinContext;
+using HttpRequestDelegate = Microsoft.Owin.OwinMiddleware;
 
 namespace HotChocolate.AspNetClassic;
 
@@ -12,7 +13,7 @@ public class WebSocketSubscriptionMiddleware : MiddlewareBase
     private readonly IServerDiagnosticEvents _diagnosticEvents;
 
     public WebSocketSubscriptionMiddleware(
-        RequestDelegate next,
+        HttpRequestDelegate next,
         IRequestExecutorResolver executorResolver,
         IHttpResultSerializer resultSerializer,
         IServerDiagnosticEvents diagnosticEvents,
@@ -39,7 +40,7 @@ public class WebSocketSubscriptionMiddleware : MiddlewareBase
     {
         if (!IsDefaultSchema)
         {
-            context.Items[WellKnownContextData.SchemaName] = SchemaName.Value;
+            context.Environment[WellKnownContextData.SchemaName] = SchemaName.Value;
         }
 
         using (_diagnosticEvents.WebSocketSession(context))
@@ -47,16 +48,16 @@ public class WebSocketSubscriptionMiddleware : MiddlewareBase
             try
             {
                 IRequestExecutor requestExecutor = 
-                    await GetExecutorAsync(context.RequestAborted);
+                    await GetExecutorAsync(context.Request.CallCancelled);
                 IMessagePipeline? messagePipeline = 
                     requestExecutor.GetRequiredService<IMessagePipeline>();
                 ISocketSessionInterceptor? socketSessionInterceptor = 
                     requestExecutor.GetRequiredService<ISocketSessionInterceptor>();
-                context.Items[WellKnownContextData.RequestExecutor] = requestExecutor;
+                context.Environment[WellKnownContextData.RequestExecutor] = requestExecutor;
 
                 await WebSocketSession
                     .New(context, messagePipeline, socketSessionInterceptor)
-                    .HandleAsync(context.RequestAborted);
+                    .HandleAsync(context.Request.CallCancelled);
             }
             catch (Exception ex)
             {

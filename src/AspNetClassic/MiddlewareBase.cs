@@ -94,7 +94,7 @@ public class MiddlewareBase : IDisposable
         HttpContext context,
         IExecutionResult result,
         HttpStatusCode? statusCode = null)
-        => WriteResultAsync(context.Response, result, statusCode, context.RequestAborted);
+        => WriteResultAsync(context.Response, result, statusCode, context.Request.CallCancelled);
 
     protected async ValueTask WriteResultAsync(
         HttpResponse response,
@@ -121,10 +121,10 @@ public class MiddlewareBase : IDisposable
         requestBuilder.SetAllowedOperations(allowedOperations);
 
         await requestInterceptor.OnCreateAsync(
-            context, requestExecutor, requestBuilder, context.RequestAborted);
+            context, requestExecutor, requestBuilder, context.Request.CallCancelled);
 
         return await requestExecutor.ExecuteAsync(
-            requestBuilder.Create(), context.RequestAborted);
+            requestBuilder.Create(), context.Request.CallCancelled);
     }
 
     protected static async Task<IBatchQueryResult> ExecuteOperationBatchAsync(
@@ -145,13 +145,13 @@ public class MiddlewareBase : IDisposable
             requestBuilder.SetOperation(operationNames[i]);
 
             await requestInterceptor.OnCreateAsync(
-                context, requestExecutor, requestBuilder, context.RequestAborted);
+                context, requestExecutor, requestBuilder, context.Request.CallCancelled);
 
             requestBatch[i] = requestBuilder.Create();
         }
 
         return await requestExecutor.ExecuteBatchAsync(
-            requestBatch, cancellationToken: context.RequestAborted);
+            requestBatch, cancellationToken: context.Request.CallCancelled);
     }
 
     protected static async Task<IBatchQueryResult> ExecuteBatchAsync(
@@ -170,18 +170,18 @@ public class MiddlewareBase : IDisposable
             QueryRequestBuilder requestBuilder = QueryRequestBuilder.From(requests[i]);
 
             await requestInterceptor.OnCreateAsync(
-                context, requestExecutor, requestBuilder, context.RequestAborted);
+                context, requestExecutor, requestBuilder, context.Request.CallCancelled);
 
             requestBatch[i] = requestBuilder.Create();
         }
 
         return await requestExecutor.ExecuteBatchAsync(
-            requestBatch, cancellationToken: context.RequestAborted);
+            requestBatch, cancellationToken: context.Request.CallCancelled);
     }
 
     protected static AllowedContentType ParseContentType(HttpContext context)
     {
-        if (context.Items.TryGetValue(nameof(AllowedContentType), out var value) &&
+        if (context.Environment.TryGetValue(nameof(AllowedContentType), out var value) &&
             value is AllowedContentType contentType)
         {
             return contentType;
@@ -193,24 +193,25 @@ public class MiddlewareBase : IDisposable
         {
             if (span[i] == ';')
             {
-                span = span[..i];
+                // TODO: Is this correct?
+                span = span.Slice(0, i);
                 break;
             }
         }
 
         if (span.SequenceEqual(ContentType.JsonSpan()))
         {
-            context.Items[nameof(AllowedContentType)] = AllowedContentType.Json;
+            context.Environment[nameof(AllowedContentType)] = AllowedContentType.Json;
             return AllowedContentType.Json;
         }
 
         if (span.SequenceEqual(ContentType.MultiPartSpan()))
         {
-            context.Items[nameof(AllowedContentType)] = AllowedContentType.Form;
+            context.Environment[nameof(AllowedContentType)] = AllowedContentType.Form;
             return AllowedContentType.Form;
         }
 
-        context.Items[nameof(AllowedContentType)] = AllowedContentType.None;
+        context.Environment[nameof(AllowedContentType)] = AllowedContentType.None;
         return AllowedContentType.None;
     }
 
