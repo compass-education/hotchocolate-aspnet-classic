@@ -1,8 +1,0 @@
-C:\src\hotchocolate-aspnet-classic\src\AspNetClassic\obj\Debug\net472\HotChocolate.AspNetClassic.csproj.AssemblyReference.cache
-C:\src\hotchocolate-aspnet-classic\src\AspNetClassic\obj\Debug\net472\HotChocolate.AspNetClassic.Properties.AspNetClassicResources.resources
-C:\src\hotchocolate-aspnet-classic\src\AspNetClassic\obj\Debug\net472\HotChocolate.AspNetClassic.csproj.GenerateResource.cache
-C:\src\hotchocolate-aspnet-classic\src\AspNetClassic\obj\Debug\net472\HotChocolate.AspNetClassic.GeneratedMSBuildEditorConfig.editorconfig
-C:\src\hotchocolate-aspnet-classic\src\AspNetClassic\obj\Debug\net472\HotChocolate.AspNetClassic.AssemblyInfoInputs.cache
-C:\src\hotchocolate-aspnet-classic\src\AspNetClassic\obj\Debug\net472\HotChocolate.AspNetClassic.AssemblyInfo.cs
-C:\src\hotchocolate-aspnet-classic\src\AspNetClassic\obj\Debug\net472\HotChocolate.AspNetClassic.csproj.CoreCompileInputs.cache
-C:\src\hotchocolate-aspnet-classic\src\AspNetClassic\obj\Debug\net472\HotChocolate.AspNetClassic.sourcelink.json
