@@ -1,6 +1,10 @@
+using System;
+using System.Threading.Tasks;
+using HotChocolate;
 using HotChocolate.AspNetClassic;
 using HotChocolate.AspNetClassic.Extensions;
 using Microsoft.Owin;
+using IApplicationBuilder = Microsoft.Owin.Builder.AppBuilder;
 
 namespace Microsoft.AspNetClassic.Builder;
 
