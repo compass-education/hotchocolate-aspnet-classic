@@ -76,7 +76,7 @@ namespace HotChocolate.AspNetClassic
             if (batch.Count == 0)
             {
                 // TODO : resources
-                var result = QueryResult.CreateError(
+                var result = QueryResultBuilder.CreateError(
                     ErrorHandler.Handle(
                         ErrorBuilder.New()
                             .SetMessage("The GraphQL batch request has no elements.")
@@ -106,7 +106,7 @@ namespace HotChocolate.AspNetClassic
                 else
                 {
                     // TODO : resources
-                    var result = QueryResult.CreateError(
+                    var result = QueryResultBuilder.CreateError(
                         ErrorHandler.Handle(
                             ErrorBuilder.New()
                                 .SetMessage("Invalid GraphQL Request.")

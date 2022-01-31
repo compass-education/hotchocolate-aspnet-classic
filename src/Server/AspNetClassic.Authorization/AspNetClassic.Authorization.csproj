@@ -18,9 +18,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="HotChocolate.Abstractions" Version="10.5.5" />
-    <PackageReference Include="HotChocolate.Language" Version="10.5.5" />
-    <PackageReference Include="HotChocolate.Types" Version="10.5.5" />
+    <PackageReference Include="HotChocolate.Abstractions" Version="12.6.0" />
+    <PackageReference Include="HotChocolate.Language" Version="12.6.0" />
+    <PackageReference Include="HotChocolate.Types" Version="12.6.0" />
   </ItemGroup>
 
 </Project>
