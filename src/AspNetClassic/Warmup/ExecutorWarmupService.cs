@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using HotChocolate.Execution;
-using Microsoft.Extensions.Hosting;
 
 namespace HotChocolate.AspNetClassic.Warmup;
 

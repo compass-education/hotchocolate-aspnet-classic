@@ -2,6 +2,7 @@ using System.Text;
 
 using HotChocolate.Language;
 using HotChocolate.Utilities;
+using Microsoft.Owin;
 using static HotChocolate.AspNetClassic.ThrowHelper;
 using static HotChocolate.Language.Utf8GraphQLRequestParser;
 
@@ -43,7 +44,7 @@ internal sealed class DefaultHttpRequestParser : IHttpRequestParser
         CancellationToken cancellationToken) =>
         ReadAsync(stream, false, cancellationToken);
 
-    public GraphQLRequest ReadParamsRequest(IQueryCollection parameters)
+    public GraphQLRequest ReadParamsRequest(IReadableStringCollection parameters)
     {
         // next we deserialize the GET request with the query request builder ...
         string query = parameters[_queryIdentifier];

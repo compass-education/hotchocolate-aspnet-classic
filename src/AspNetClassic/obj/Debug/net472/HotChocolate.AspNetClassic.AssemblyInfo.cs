@@ -17,7 +17,7 @@ using System.Reflection;
     "over, this package includes the Banana Cake Pop middleware, which provides you w" +
     "ith our beloved GraphQL IDE middleware.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.0+efa13c2a58bd20f1025ff81c88f408d37d0e75d5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hot Chocolate")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HotChocolate.AspNetClassic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.0.0.0")]

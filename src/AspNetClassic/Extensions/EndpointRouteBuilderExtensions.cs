@@ -1,5 +1,6 @@
 using HotChocolate.AspNetClassic;
 using HotChocolate.AspNetClassic.Extensions;
+using Microsoft.Owin;
 
 namespace Microsoft.AspNetClassic.Builder;
 
