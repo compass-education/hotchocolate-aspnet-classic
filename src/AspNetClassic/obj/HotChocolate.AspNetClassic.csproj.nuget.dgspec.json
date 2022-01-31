@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\src\\hotchocolate-aspnetclassic-fromv12\\src\\AspNetClassic\\HotChocolate.AspNetClassic.csproj": {}
+  },
+  "projects": {
+    "C:\\src\\hotchocolate-aspnetclassic-fromv12\\src\\AspNetClassic\\HotChocolate.AspNetClassic.csproj": {
+      "version": "0.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\src\\hotchocolate-aspnetclassic-fromv12\\src\\AspNetClassic\\HotChocolate.AspNetClassic.csproj",
+        "projectName": "HotChocolate.AspNetClassic",
+        "projectPath": "C:\\src\\hotchocolate-aspnetclassic-fromv12\\src\\AspNetClassic\\HotChocolate.AspNetClassic.csproj",
+        "packagesPath": "C:\\Users\\ksteele\\.nuget\\packages\\",
+        "outputPath": "C:\\src\\hotchocolate-aspnetclassic-fromv12\\src\\AspNetClassic\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ksteele\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "HotChocolate": {
+              "target": "Package",
+              "version": "[12.6.0, )"
+            },
+            "HotChocolate.Types.Scalars.Upload": {
+              "target": "Package",
+              "version": "[12.6.0, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.Owin": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "System.IO.Pipelines": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

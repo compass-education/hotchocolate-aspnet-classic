@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = HotChocolate.AspNetClassic.Authorization
+build_property.ProjectDir = C:\src\hotchocolate-aspnetclassic-fromv12\src\AspNetClassic.Authorization\

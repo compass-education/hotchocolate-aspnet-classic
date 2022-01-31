@@ -1,0 +1,55 @@
+{
+  "version": 2,
+  "dgSpecHash": "MhblxpGRydSpF0Tsx9xg2A7zz/L4gqlny4Qdvuf+5zBmbVmSczqjtDq1KM1AWPD/iRSwmGDZEBwY2vOzb8/T2Q==",
+  "success": false,
+  "projectFilePath": "C:\\src\\hotchocolate-aspnetclassic-fromv12\\src\\AspNetClassic.Authorization\\HotChocolate.AspNetClassic.Authorization.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ksteele\\.nuget\\packages\\greendonut\\12.6.0\\greendonut.12.6.0.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\hotchocolate.abstractions\\12.6.0\\hotchocolate.abstractions.12.6.0.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\hotchocolate.execution\\12.6.0\\hotchocolate.execution.12.6.0.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\hotchocolate.fetching\\12.6.0\\hotchocolate.fetching.12.6.0.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\hotchocolate.language\\12.6.0\\hotchocolate.language.12.6.0.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\hotchocolate.language.syntaxtree\\12.6.0\\hotchocolate.language.syntaxtree.12.6.0.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\hotchocolate.language.utf8\\12.6.0\\hotchocolate.language.utf8.12.6.0.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\hotchocolate.language.visitors\\12.6.0\\hotchocolate.language.visitors.12.6.0.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\hotchocolate.subscriptions\\12.6.0\\hotchocolate.subscriptions.12.6.0.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\hotchocolate.types\\12.6.0\\hotchocolate.types.12.6.0.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\hotchocolate.utilities\\12.6.0\\hotchocolate.utilities.12.6.0.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\hotchocolate.utilities.introspection\\12.6.0\\hotchocolate.utilities.introspection.12.6.0.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\hotchocolate.validation\\12.6.0\\hotchocolate.validation.12.6.0.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\microsoft.build.tasks.git\\1.1.0\\microsoft.build.tasks.git.1.1.0.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.4\\microsoft.extensions.dependencyinjection.3.1.4.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.4\\microsoft.extensions.dependencyinjection.abstractions.3.1.4.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\microsoft.extensions.diagnosticadapter\\3.1.4\\microsoft.extensions.diagnosticadapter.3.1.4.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\microsoft.extensions.objectpool\\3.1.4\\microsoft.extensions.objectpool.3.1.4.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\microsoft.extensions.options\\3.1.4\\microsoft.extensions.options.3.1.4.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.4\\microsoft.extensions.primitives.3.1.4.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\microsoft.sourcelink.common\\1.1.0\\microsoft.sourcelink.common.1.1.0.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\microsoft.sourcelink.github\\1.1.0\\microsoft.sourcelink.github.1.1.0.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\system.collections.immutable\\1.7.0\\system.collections.immutable.1.7.0.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1\\system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\system.text.encodings.web\\4.7.0\\system.text.encodings.web.4.7.0.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\system.text.json\\4.7.0\\system.text.json.4.7.0.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\system.threading.channels\\4.7.0\\system.threading.channels.4.7.0.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "C:\\Users\\ksteele\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.AspNetClassic.Authorization. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages, nuget.org",
+      "libraryId": "Microsoft.AspNetClassic.Authorization",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.7.2"
+      ]
+    }
+  ]
+}

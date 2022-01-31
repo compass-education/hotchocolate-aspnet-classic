@@ -1,0 +1,58 @@
+#nullable enable
+HotChocolate.AspNetClassic.Authorization.ApplyPolicy
+HotChocolate.AspNetClassic.Authorization.ApplyPolicy.AfterResolver = 1 -> HotChocolate.AspNetClassic.Authorization.ApplyPolicy
+HotChocolate.AspNetClassic.Authorization.ApplyPolicy.BeforeResolver = 0 -> HotChocolate.AspNetClassic.Authorization.ApplyPolicy
+HotChocolate.AspNetClassic.Authorization.ApplyPolicyType
+HotChocolate.AspNetClassic.Authorization.ApplyPolicyType.ApplyPolicyType() -> void
+HotChocolate.AspNetClassic.Authorization.AuthorizeAttribute
+HotChocolate.AspNetClassic.Authorization.AuthorizeAttribute.Apply.get -> HotChocolate.AspNetClassic.Authorization.ApplyPolicy
+HotChocolate.AspNetClassic.Authorization.AuthorizeAttribute.Apply.set -> void
+HotChocolate.AspNetClassic.Authorization.AuthorizeAttribute.AuthorizeAttribute() -> void
+HotChocolate.AspNetClassic.Authorization.AuthorizeAttribute.Policy.get -> string?
+HotChocolate.AspNetClassic.Authorization.AuthorizeAttribute.Policy.set -> void
+HotChocolate.AspNetClassic.Authorization.AuthorizeAttribute.Roles.get -> string![]?
+HotChocolate.AspNetClassic.Authorization.AuthorizeAttribute.Roles.set -> void
+HotChocolate.AspNetClassic.Authorization.AuthorizeDirective
+HotChocolate.AspNetClassic.Authorization.AuthorizeDirective.Apply.get -> HotChocolate.AspNetClassic.Authorization.ApplyPolicy
+HotChocolate.AspNetClassic.Authorization.AuthorizeDirective.AuthorizeDirective(string? policy = null, System.Collections.Generic.IReadOnlyList<string!>? roles = null, HotChocolate.AspNetClassic.Authorization.ApplyPolicy apply = HotChocolate.AspNetClassic.Authorization.ApplyPolicy.BeforeResolver) -> void
+HotChocolate.AspNetClassic.Authorization.AuthorizeDirective.AuthorizeDirective(System.Collections.Generic.IReadOnlyList<string!>! roles, HotChocolate.AspNetClassic.Authorization.ApplyPolicy apply = HotChocolate.AspNetClassic.Authorization.ApplyPolicy.BeforeResolver) -> void
+HotChocolate.AspNetClassic.Authorization.AuthorizeDirective.AuthorizeDirective(System.Runtime.Serialization.SerializationInfo! info, System.Runtime.Serialization.StreamingContext context) -> void
+HotChocolate.AspNetClassic.Authorization.AuthorizeDirective.GetObjectData(System.Runtime.Serialization.SerializationInfo! info, System.Runtime.Serialization.StreamingContext context) -> void
+HotChocolate.AspNetClassic.Authorization.AuthorizeDirective.Policy.get -> string?
+HotChocolate.AspNetClassic.Authorization.AuthorizeDirective.Roles.get -> System.Collections.Generic.IReadOnlyList<string!>?
+HotChocolate.AspNetClassic.Authorization.AuthorizeDirectiveType
+HotChocolate.AspNetClassic.Authorization.AuthorizeDirectiveType.AuthorizeDirectiveType() -> void
+HotChocolate.AspNetClassic.Authorization.AuthorizeResult
+HotChocolate.AspNetClassic.Authorization.AuthorizeResult.Allowed = 0 -> HotChocolate.AspNetClassic.Authorization.AuthorizeResult
+HotChocolate.AspNetClassic.Authorization.AuthorizeResult.NoDefaultPolicy = 3 -> HotChocolate.AspNetClassic.Authorization.AuthorizeResult
+HotChocolate.AspNetClassic.Authorization.AuthorizeResult.NotAllowed = 1 -> HotChocolate.AspNetClassic.Authorization.AuthorizeResult
+HotChocolate.AspNetClassic.Authorization.AuthorizeResult.NotAuthenticated = 2 -> HotChocolate.AspNetClassic.Authorization.AuthorizeResult
+HotChocolate.AspNetClassic.Authorization.AuthorizeResult.PolicyNotFound = 4 -> HotChocolate.AspNetClassic.Authorization.AuthorizeResult
+HotChocolate.AspNetClassic.Authorization.DefaultAuthorizationHandler
+HotChocolate.AspNetClassic.Authorization.DefaultAuthorizationHandler.AuthorizeAsync(HotChocolate.Resolvers.IMiddlewareContext! context, HotChocolate.AspNetClassic.Authorization.AuthorizeDirective! directive) -> System.Threading.Tasks.ValueTask<HotChocolate.AspNetClassic.Authorization.AuthorizeResult>
+HotChocolate.AspNetClassic.Authorization.DefaultAuthorizationHandler.DefaultAuthorizationHandler() -> void
+HotChocolate.AspNetClassic.Authorization.IAuthorizationHandler
+HotChocolate.AspNetClassic.Authorization.IAuthorizationHandler.AuthorizeAsync(HotChocolate.Resolvers.IMiddlewareContext! context, HotChocolate.AspNetClassic.Authorization.AuthorizeDirective! directive) -> System.Threading.Tasks.ValueTask<HotChocolate.AspNetClassic.Authorization.AuthorizeResult>
+HotChocolate.AuthorizeSchemaBuilderExtensions
+HotChocolate.Types.AuthorizeObjectFieldDescriptorExtensions
+HotChocolate.Types.AuthorizeObjectTypeDescriptorExtensions
+HotChocolate.Types.AuthorizeSchemaTypeDescriptorExtensions
+Microsoft.Extensions.DependencyInjection.HotChocolateAuthorizeRequestExecutorBuilder
+override HotChocolate.AspNetClassic.Authorization.AuthorizeAttribute.TryConfigure(HotChocolate.Types.Descriptors.IDescriptorContext! context, HotChocolate.Types.IDescriptor! descriptor, System.Reflection.ICustomAttributeProvider! element) -> void
+static HotChocolate.AuthorizeSchemaBuilderExtensions.AddAuthorizeDirectiveType(this HotChocolate.ISchemaBuilder! builder) -> HotChocolate.ISchemaBuilder!
+static HotChocolate.Types.AuthorizeObjectFieldDescriptorExtensions.Authorize(this HotChocolate.Types.IObjectFieldDescriptor! descriptor, HotChocolate.AspNetClassic.Authorization.ApplyPolicy apply = HotChocolate.AspNetClassic.Authorization.ApplyPolicy.BeforeResolver) -> HotChocolate.Types.IObjectFieldDescriptor!
+static HotChocolate.Types.AuthorizeObjectFieldDescriptorExtensions.Authorize(this HotChocolate.Types.IObjectFieldDescriptor! descriptor, params string![]! roles) -> HotChocolate.Types.IObjectFieldDescriptor!
+static HotChocolate.Types.AuthorizeObjectFieldDescriptorExtensions.Authorize(this HotChocolate.Types.IObjectFieldDescriptor! descriptor, string! policy, HotChocolate.AspNetClassic.Authorization.ApplyPolicy apply = HotChocolate.AspNetClassic.Authorization.ApplyPolicy.BeforeResolver) -> HotChocolate.Types.IObjectFieldDescriptor!
+static HotChocolate.Types.AuthorizeObjectTypeDescriptorExtensions.Authorize(this HotChocolate.Types.IObjectTypeDescriptor! descriptor, HotChocolate.AspNetClassic.Authorization.ApplyPolicy apply = HotChocolate.AspNetClassic.Authorization.ApplyPolicy.BeforeResolver) -> HotChocolate.Types.IObjectTypeDescriptor!
+static HotChocolate.Types.AuthorizeObjectTypeDescriptorExtensions.Authorize(this HotChocolate.Types.IObjectTypeDescriptor! descriptor, params string![]! roles) -> HotChocolate.Types.IObjectTypeDescriptor!
+static HotChocolate.Types.AuthorizeObjectTypeDescriptorExtensions.Authorize(this HotChocolate.Types.IObjectTypeDescriptor! descriptor, string! policy, HotChocolate.AspNetClassic.Authorization.ApplyPolicy apply = HotChocolate.AspNetClassic.Authorization.ApplyPolicy.BeforeResolver) -> HotChocolate.Types.IObjectTypeDescriptor!
+static HotChocolate.Types.AuthorizeObjectTypeDescriptorExtensions.Authorize<T>(this HotChocolate.Types.IObjectTypeDescriptor<T>! descriptor, HotChocolate.AspNetClassic.Authorization.ApplyPolicy apply = HotChocolate.AspNetClassic.Authorization.ApplyPolicy.BeforeResolver) -> HotChocolate.Types.IObjectTypeDescriptor<T>!
+static HotChocolate.Types.AuthorizeObjectTypeDescriptorExtensions.Authorize<T>(this HotChocolate.Types.IObjectTypeDescriptor<T>! descriptor, params string![]! roles) -> HotChocolate.Types.IObjectTypeDescriptor<T>!
+static HotChocolate.Types.AuthorizeObjectTypeDescriptorExtensions.Authorize<T>(this HotChocolate.Types.IObjectTypeDescriptor<T>! descriptor, string! policy, HotChocolate.AspNetClassic.Authorization.ApplyPolicy apply = HotChocolate.AspNetClassic.Authorization.ApplyPolicy.BeforeResolver) -> HotChocolate.Types.IObjectTypeDescriptor<T>!
+static HotChocolate.Types.AuthorizeSchemaTypeDescriptorExtensions.Authorize(this HotChocolate.Types.ISchemaTypeDescriptor! self, params string![]! roles) -> HotChocolate.Types.ISchemaTypeDescriptor!
+static HotChocolate.Types.AuthorizeSchemaTypeDescriptorExtensions.Authorize(this HotChocolate.Types.ISchemaTypeDescriptor! self, string! policy, params string![]! roles) -> HotChocolate.Types.ISchemaTypeDescriptor!
+static HotChocolate.Types.AuthorizeSchemaTypeDescriptorExtensions.Authorize(this HotChocolate.Types.ISchemaTypeDescriptor! self, string! policy) -> HotChocolate.Types.ISchemaTypeDescriptor!
+static HotChocolate.Types.AuthorizeSchemaTypeDescriptorExtensions.Authorize(this HotChocolate.Types.ISchemaTypeDescriptor! self) -> HotChocolate.Types.ISchemaTypeDescriptor!
+static Microsoft.Extensions.DependencyInjection.HotChocolateAuthorizeRequestExecutorBuilder.AddAuthorization(this HotChocolate.Execution.Configuration.IRequestExecutorBuilder! builder) -> HotChocolate.Execution.Configuration.IRequestExecutorBuilder!
+static Microsoft.Extensions.DependencyInjection.HotChocolateAuthorizeRequestExecutorBuilder.AddAuthorizationHandler<T>(this HotChocolate.Execution.Configuration.IRequestExecutorBuilder! builder) -> HotChocolate.Execution.Configuration.IRequestExecutorBuilder!
+static Microsoft.Extensions.DependencyInjection.HotChocolateAuthorizeRequestExecutorBuilder.AddAuthorizeDirectiveType(this HotChocolate.Execution.Configuration.IRequestExecutorBuilder! builder) -> HotChocolate.Execution.Configuration.IRequestExecutorBuilder!

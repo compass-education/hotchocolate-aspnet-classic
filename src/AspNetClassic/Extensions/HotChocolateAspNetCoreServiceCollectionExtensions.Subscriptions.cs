@@ -1,0 +1,70 @@
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using HotChocolate.AspNetClassic;
+using HotChocolate.AspNetClassic.Subscriptions;
+using HotChocolate.AspNetClassic.Subscriptions.Messages;
+using HotChocolate.Execution.Configuration;
+using HotChocolate.Utilities;
+
+namespace Microsoft.Extensions.DependencyInjection;
+
+public static partial class HotChocolateAspNetClassicServiceCollectionExtensions
+{
+    /// <summary>
+    /// Adds an interceptor for GraphQL socket sessions to the GraphQL configuration.
+    /// </summary>
+    /// <param name="builder">
+    /// The <see cref="IRequestExecutorBuilder"/>.
+    /// </param>
+    /// <typeparam name="T">
+    /// The <see cref="ISocketSessionInterceptor"/> implementation.
+    /// </typeparam>
+    /// <returns>
+    /// Returns the <see cref="IRequestExecutorBuilder"/> so that configuration can be chained.
+    /// </returns>
+    public static IRequestExecutorBuilder AddSocketSessionInterceptor<T>(
+        this IRequestExecutorBuilder builder)
+        where T : class, ISocketSessionInterceptor =>
+        builder.ConfigureSchemaServices(s => s
+            .RemoveAll<ISocketSessionInterceptor>()
+            .AddSingleton<ISocketSessionInterceptor, T>(
+                sp => sp.GetCombinedServices().GetOrCreateService<T>(typeof(T))!));
+
+    /// <summary>
+    /// Adds an interceptor for GraphQL socket sessions to the GraphQL configuration.
+    /// </summary>
+    /// <param name="builder">
+    /// The <see cref="IRequestExecutorBuilder"/>.
+    /// </param>
+    /// <param name="factory">
+    /// A factory that creates the interceptor instance.
+    /// </param>
+    /// <typeparam name="T">
+    /// The <see cref="ISocketSessionInterceptor"/> implementation.
+    /// </typeparam>
+    /// <returns>
+    /// Returns the <see cref="IRequestExecutorBuilder"/> so that configuration can be chained.
+    /// </returns>
+    public static IRequestExecutorBuilder AddSocketSessionInterceptor<T>(
+        this IRequestExecutorBuilder builder,
+        Func<IServiceProvider, T> factory)
+        where T : class, ISocketSessionInterceptor =>
+        builder.ConfigureSchemaServices(s => s
+            .RemoveAll<ISocketSessionInterceptor>()
+            .AddSingleton<ISocketSessionInterceptor, T>(
+                sp => factory(sp.GetCombinedServices())));
+
+    private static IRequestExecutorBuilder AddSubscriptionServices(
+        this IRequestExecutorBuilder builder)
+    {
+        return builder.ConfigureSchemaServices(s =>
+        {
+            s.TryAddSingleton<IMessagePipeline, DefaultMessagePipeline>();
+            s.TryAddSingleton<ISocketSessionInterceptor, DefaultSocketSessionInterceptor>();
+
+            s.AddSingleton<IMessageHandler, DataStartMessageHandler>();
+            s.AddSingleton<IMessageHandler, DataStopMessageHandler>();
+            s.AddSingleton<IMessageHandler, InitializeConnectionMessageHandler>();
+            s.AddSingleton<IMessageHandler, TerminateConnectionMessageHandler>();
+        });
+    }
+}
