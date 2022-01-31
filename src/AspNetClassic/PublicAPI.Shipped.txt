@@ -1,0 +1,280 @@
+#nullable enable
+abstract HotChocolate.AspNetClassic.Subscriptions.Messages.MessageHandler<T>.HandleAsync(HotChocolate.AspNetClassic.Subscriptions.ISocketConnection! connection, T! message, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.Task!
+HotChocolate.AspNetClassic.AllowedContentType
+HotChocolate.AspNetClassic.AllowedContentType.Form = 2 -> HotChocolate.AspNetClassic.AllowedContentType
+HotChocolate.AspNetClassic.AllowedContentType.Json = 1 -> HotChocolate.AspNetClassic.AllowedContentType
+HotChocolate.AspNetClassic.AllowedContentType.None = 0 -> HotChocolate.AspNetClassic.AllowedContentType
+HotChocolate.AspNetClassic.AllowedGetOperations
+HotChocolate.AspNetClassic.AllowedGetOperations.Query = 0 -> HotChocolate.AspNetClassic.AllowedGetOperations
+HotChocolate.AspNetClassic.AllowedGetOperations.QueryAndMutation = 1 -> HotChocolate.AspNetClassic.AllowedGetOperations
+HotChocolate.AspNetClassic.DefaultHttpMethod
+HotChocolate.AspNetClassic.DefaultHttpMethod.Get = 0 -> HotChocolate.AspNetClassic.DefaultHttpMethod
+HotChocolate.AspNetClassic.DefaultHttpMethod.Post = 1 -> HotChocolate.AspNetClassic.DefaultHttpMethod
+HotChocolate.AspNetClassic.DefaultHttpRequestInterceptor
+HotChocolate.AspNetClassic.DefaultHttpRequestInterceptor.DefaultHttpRequestInterceptor() -> void
+HotChocolate.AspNetClassic.DefaultSocketSessionInterceptor
+HotChocolate.AspNetClassic.DefaultSocketSessionInterceptor.DefaultSocketSessionInterceptor() -> void
+HotChocolate.AspNetClassic.Extensions.BananaCakePopEndpointConventionBuilder
+HotChocolate.AspNetClassic.Extensions.BananaCakePopEndpointConventionBuilder.Add(System.Action<Microsoft.AspNetClassic.Builder.EndpointBuilder!>! convention) -> void
+HotChocolate.AspNetClassic.Extensions.GraphQLEndpointConventionBuilder
+HotChocolate.AspNetClassic.Extensions.GraphQLEndpointConventionBuilder.Add(System.Action<Microsoft.AspNetClassic.Builder.EndpointBuilder!>! convention) -> void
+HotChocolate.AspNetClassic.Extensions.GraphQLHttpEndpointConventionBuilder
+HotChocolate.AspNetClassic.Extensions.GraphQLHttpEndpointConventionBuilder.Add(System.Action<Microsoft.AspNetClassic.Builder.EndpointBuilder!>! convention) -> void
+HotChocolate.AspNetClassic.GraphQLHttpOptions
+HotChocolate.AspNetClassic.GraphQLHttpOptions.AllowedGetOperations.get -> HotChocolate.AspNetClassic.AllowedGetOperations
+HotChocolate.AspNetClassic.GraphQLHttpOptions.AllowedGetOperations.set -> void
+HotChocolate.AspNetClassic.GraphQLHttpOptions.EnableGetRequests.get -> bool
+HotChocolate.AspNetClassic.GraphQLHttpOptions.EnableGetRequests.set -> void
+HotChocolate.AspNetClassic.GraphQLHttpOptions.EnableMultipartRequests.get -> bool
+HotChocolate.AspNetClassic.GraphQLHttpOptions.EnableMultipartRequests.set -> void
+HotChocolate.AspNetClassic.GraphQLHttpOptions.GraphQLHttpOptions() -> void
+HotChocolate.AspNetClassic.GraphQLRequestException
+HotChocolate.AspNetClassic.GraphQLRequestException.GraphQLRequestException(HotChocolate.IError! error) -> void
+HotChocolate.AspNetClassic.GraphQLRequestException.GraphQLRequestException(params HotChocolate.IError![]! errors) -> void
+HotChocolate.AspNetClassic.GraphQLRequestException.GraphQLRequestException(string! message) -> void
+HotChocolate.AspNetClassic.GraphQLRequestException.GraphQLRequestException(System.Collections.Generic.IEnumerable<HotChocolate.IError!>! errors) -> void
+HotChocolate.AspNetClassic.GraphQLRequestException.GraphQLRequestException(System.Runtime.Serialization.SerializationInfo! info, System.Runtime.Serialization.StreamingContext context) -> void
+HotChocolate.AspNetClassic.GraphQLServerOptions
+HotChocolate.AspNetClassic.GraphQLServerOptions.AllowedGetOperations.get -> HotChocolate.AspNetClassic.AllowedGetOperations
+HotChocolate.AspNetClassic.GraphQLServerOptions.AllowedGetOperations.set -> void
+HotChocolate.AspNetClassic.GraphQLServerOptions.EnableGetRequests.get -> bool
+HotChocolate.AspNetClassic.GraphQLServerOptions.EnableGetRequests.set -> void
+HotChocolate.AspNetClassic.GraphQLServerOptions.EnableMultipartRequests.get -> bool
+HotChocolate.AspNetClassic.GraphQLServerOptions.EnableMultipartRequests.set -> void
+HotChocolate.AspNetClassic.GraphQLServerOptions.EnableSchemaRequests.get -> bool
+HotChocolate.AspNetClassic.GraphQLServerOptions.EnableSchemaRequests.set -> void
+HotChocolate.AspNetClassic.GraphQLServerOptions.GraphQLServerOptions() -> void
+HotChocolate.AspNetClassic.GraphQLServerOptions.Tool.get -> HotChocolate.AspNetClassic.GraphQLToolOptions!
+HotChocolate.AspNetClassic.GraphQLToolOptions
+HotChocolate.AspNetClassic.GraphQLToolOptions.DisableTelemetry.get -> bool?
+HotChocolate.AspNetClassic.GraphQLToolOptions.DisableTelemetry.set -> void
+HotChocolate.AspNetClassic.GraphQLToolOptions.Document.get -> string?
+HotChocolate.AspNetClassic.GraphQLToolOptions.Document.set -> void
+HotChocolate.AspNetClassic.GraphQLToolOptions.Enable.get -> bool
+HotChocolate.AspNetClassic.GraphQLToolOptions.Enable.set -> void
+HotChocolate.AspNetClassic.GraphQLToolOptions.GaTrackingId.get -> string?
+HotChocolate.AspNetClassic.GraphQLToolOptions.GaTrackingId.set -> void
+HotChocolate.AspNetClassic.GraphQLToolOptions.GraphQLEndpoint.get -> string?
+HotChocolate.AspNetClassic.GraphQLToolOptions.GraphQLEndpoint.set -> void
+HotChocolate.AspNetClassic.GraphQLToolOptions.GraphQLToolOptions() -> void
+HotChocolate.AspNetClassic.GraphQLToolOptions.HttpHeaders.get -> Microsoft.AspNetClassic.Http.IHeaderDictionary?
+HotChocolate.AspNetClassic.GraphQLToolOptions.HttpHeaders.set -> void
+HotChocolate.AspNetClassic.GraphQLToolOptions.HttpMethod.get -> HotChocolate.AspNetClassic.DefaultHttpMethod?
+HotChocolate.AspNetClassic.GraphQLToolOptions.HttpMethod.set -> void
+HotChocolate.AspNetClassic.GraphQLToolOptions.IncludeCookies.get -> bool?
+HotChocolate.AspNetClassic.GraphQLToolOptions.IncludeCookies.set -> void
+HotChocolate.AspNetClassic.GraphQLToolOptions.Title.get -> string?
+HotChocolate.AspNetClassic.GraphQLToolOptions.Title.set -> void
+HotChocolate.AspNetClassic.GraphQLToolOptions.UseBrowserUrlAsGraphQLEndpoint.get -> bool
+HotChocolate.AspNetClassic.GraphQLToolOptions.UseBrowserUrlAsGraphQLEndpoint.set -> void
+HotChocolate.AspNetClassic.HttpGetMiddleware
+HotChocolate.AspNetClassic.HttpGetMiddleware.HttpGetMiddleware(Microsoft.AspNetClassic.Http.RequestDelegate! next, HotChocolate.Execution.IRequestExecutorResolver! executorResolver, HotChocolate.AspNetClassic.Serialization.IHttpResultSerializer! resultSerializer, HotChocolate.AspNetClassic.Serialization.IHttpRequestParser! requestParser, HotChocolate.NameString schemaName) -> void
+HotChocolate.AspNetClassic.HttpGetMiddleware.InvokeAsync(Microsoft.AspNetClassic.Http.HttpContext! context) -> System.Threading.Tasks.Task!
+HotChocolate.AspNetClassic.HttpGetSchemaMiddleware
+HotChocolate.AspNetClassic.HttpGetSchemaMiddleware.HttpGetSchemaMiddleware(Microsoft.AspNetClassic.Http.RequestDelegate! next, HotChocolate.Execution.IRequestExecutorResolver! executorResolver, HotChocolate.AspNetClassic.Serialization.IHttpResultSerializer! resultSerializer, HotChocolate.NameString schemaName, HotChocolate.AspNetClassic.MiddlewareRoutingType routing) -> void
+HotChocolate.AspNetClassic.HttpGetSchemaMiddleware.InvokeAsync(Microsoft.AspNetClassic.Http.HttpContext! context) -> System.Threading.Tasks.Task!
+HotChocolate.AspNetClassic.HttpMultipartMiddleware
+HotChocolate.AspNetClassic.HttpMultipartMiddleware.HttpMultipartMiddleware(Microsoft.AspNetClassic.Http.RequestDelegate! next, HotChocolate.Execution.IRequestExecutorResolver! executorResolver, HotChocolate.AspNetClassic.Serialization.IHttpResultSerializer! resultSerializer, HotChocolate.AspNetClassic.Serialization.IHttpRequestParser! requestParser, HotChocolate.NameString schemaName, Microsoft.Extensions.Options.IOptions<Microsoft.AspNetClassic.Http.Features.FormOptions!>! formOptions) -> void
+HotChocolate.AspNetClassic.HttpPostMiddleware
+HotChocolate.AspNetClassic.HttpPostMiddleware.HandleRequestAsync(Microsoft.AspNetClassic.Http.HttpContext! context, HotChocolate.AspNetClassic.AllowedContentType contentType) -> System.Threading.Tasks.Task!
+HotChocolate.AspNetClassic.HttpPostMiddleware.HttpPostMiddleware(Microsoft.AspNetClassic.Http.RequestDelegate! next, HotChocolate.Execution.IRequestExecutorResolver! executorResolver, HotChocolate.AspNetClassic.Serialization.IHttpResultSerializer! resultSerializer, HotChocolate.AspNetClassic.Serialization.IHttpRequestParser! requestParser, HotChocolate.NameString schemaName) -> void
+HotChocolate.AspNetClassic.HttpPostMiddleware.RequestParser.get -> HotChocolate.AspNetClassic.Serialization.IHttpRequestParser!
+HotChocolate.AspNetClassic.HttpRequestInterceptorDelegate
+HotChocolate.AspNetClassic.IHttpRequestInterceptor
+HotChocolate.AspNetClassic.IHttpRequestInterceptor.OnCreateAsync(Microsoft.AspNetClassic.Http.HttpContext! context, HotChocolate.Execution.IRequestExecutor! requestExecutor, HotChocolate.Execution.IQueryRequestBuilder! requestBuilder, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.ValueTask
+HotChocolate.AspNetClassic.ISocketSessionInterceptor
+HotChocolate.AspNetClassic.ISocketSessionInterceptor.OnCloseAsync(HotChocolate.AspNetClassic.Subscriptions.ISocketConnection! connection, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.ValueTask
+HotChocolate.AspNetClassic.ISocketSessionInterceptor.OnConnectAsync(HotChocolate.AspNetClassic.Subscriptions.ISocketConnection! connection, HotChocolate.AspNetClassic.Subscriptions.Messages.InitializeConnectionMessage! message, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.ValueTask<HotChocolate.AspNetClassic.Subscriptions.ConnectionStatus!>
+HotChocolate.AspNetClassic.ISocketSessionInterceptor.OnRequestAsync(HotChocolate.AspNetClassic.Subscriptions.ISocketConnection! connection, HotChocolate.Execution.IQueryRequestBuilder! requestBuilder, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.ValueTask
+HotChocolate.AspNetClassic.MiddlewareBase
+HotChocolate.AspNetClassic.MiddlewareBase.Dispose() -> void
+HotChocolate.AspNetClassic.MiddlewareBase.ExecuteBatchAsync(Microsoft.AspNetClassic.Http.HttpContext! context, HotChocolate.Execution.IRequestExecutor! requestExecutor, HotChocolate.AspNetClassic.IHttpRequestInterceptor! requestInterceptor, System.Collections.Generic.IReadOnlyList<HotChocolate.Language.GraphQLRequest!>! requests) -> System.Threading.Tasks.Task<HotChocolate.Execution.IBatchQueryResult!>!
+HotChocolate.AspNetClassic.MiddlewareBase.ExecuteOperationBatchAsync(Microsoft.AspNetClassic.Http.HttpContext! context, HotChocolate.Execution.IRequestExecutor! requestExecutor, HotChocolate.AspNetClassic.IHttpRequestInterceptor! requestInterceptor, HotChocolate.Language.GraphQLRequest! request, System.Collections.Generic.IReadOnlyList<string!>! operationNames) -> System.Threading.Tasks.Task<HotChocolate.Execution.IBatchQueryResult!>!
+HotChocolate.AspNetClassic.MiddlewareBase.ExecuteSingleAsync(Microsoft.AspNetClassic.Http.HttpContext! context, HotChocolate.Execution.IRequestExecutor! requestExecutor, HotChocolate.AspNetClassic.IHttpRequestInterceptor! requestInterceptor, HotChocolate.Language.GraphQLRequest! request, HotChocolate.Language.OperationType[]? allowedOperations = null) -> System.Threading.Tasks.Task<HotChocolate.Execution.IExecutionResult!>!
+HotChocolate.AspNetClassic.MiddlewareBase.ExecutorProxy.get -> HotChocolate.Execution.RequestExecutorProxy!
+HotChocolate.AspNetClassic.MiddlewareBase.GetExecutorAsync(System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.ValueTask<HotChocolate.Execution.IRequestExecutor!>
+HotChocolate.AspNetClassic.MiddlewareBase.MiddlewareBase(Microsoft.AspNetClassic.Http.RequestDelegate! next, HotChocolate.Execution.IRequestExecutorResolver! executorResolver, HotChocolate.AspNetClassic.Serialization.IHttpResultSerializer! resultSerializer, HotChocolate.NameString schemaName) -> void
+HotChocolate.AspNetClassic.MiddlewareBase.NextAsync(Microsoft.AspNetClassic.Http.HttpContext! context) -> System.Threading.Tasks.Task!
+HotChocolate.AspNetClassic.MiddlewareBase.SchemaName.get -> HotChocolate.NameString
+HotChocolate.AspNetClassic.MiddlewareBase.WriteResultAsync(Microsoft.AspNetClassic.Http.HttpResponse! response, HotChocolate.Execution.IExecutionResult! result, System.Net.HttpStatusCode? statusCode, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.ValueTask
+HotChocolate.AspNetClassic.MiddlewareRoutingType
+HotChocolate.AspNetClassic.MiddlewareRoutingType.Explicit = 1 -> HotChocolate.AspNetClassic.MiddlewareRoutingType
+HotChocolate.AspNetClassic.MiddlewareRoutingType.Integrated = 0 -> HotChocolate.AspNetClassic.MiddlewareRoutingType
+HotChocolate.AspNetClassic.Serialization.DefaultHttpResultSerializer
+HotChocolate.AspNetClassic.Serialization.DefaultHttpResultSerializer.DefaultHttpResultSerializer(HotChocolate.AspNetClassic.Serialization.HttpResultSerialization batchSerialization = HotChocolate.AspNetClassic.Serialization.HttpResultSerialization.MultiPartChunked, HotChocolate.AspNetClassic.Serialization.HttpResultSerialization deferSerialization = HotChocolate.AspNetClassic.Serialization.HttpResultSerialization.MultiPartChunked, bool indented = false) -> void
+HotChocolate.AspNetClassic.Serialization.HttpResultSerialization
+HotChocolate.AspNetClassic.Serialization.HttpResultSerialization.JsonArray = 0 -> HotChocolate.AspNetClassic.Serialization.HttpResultSerialization
+HotChocolate.AspNetClassic.Serialization.HttpResultSerialization.MultiPartChunked = 1 -> HotChocolate.AspNetClassic.Serialization.HttpResultSerialization
+HotChocolate.AspNetClassic.Serialization.IHttpRequestParser
+HotChocolate.AspNetClassic.Serialization.IHttpRequestParser.ReadJsonRequestAsync(System.IO.Stream! stream, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.ValueTask<System.Collections.Generic.IReadOnlyList<HotChocolate.Language.GraphQLRequest!>!>
+HotChocolate.AspNetClassic.Serialization.IHttpRequestParser.ReadOperationsRequest(string! operations) -> System.Collections.Generic.IReadOnlyList<HotChocolate.Language.GraphQLRequest!>!
+HotChocolate.AspNetClassic.Serialization.IHttpRequestParser.ReadParamsRequest(Microsoft.AspNetClassic.Http.IQueryCollection! parameters) -> HotChocolate.Language.GraphQLRequest!
+HotChocolate.AspNetClassic.Serialization.IHttpResultSerializer
+HotChocolate.AspNetClassic.Serialization.IHttpResultSerializer.GetContentType(HotChocolate.Execution.IExecutionResult! result) -> string!
+HotChocolate.AspNetClassic.Serialization.IHttpResultSerializer.GetStatusCode(HotChocolate.Execution.IExecutionResult! result) -> System.Net.HttpStatusCode
+HotChocolate.AspNetClassic.Serialization.IHttpResultSerializer.SerializeAsync(HotChocolate.Execution.IExecutionResult! result, System.IO.Stream! stream, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.ValueTask
+HotChocolate.AspNetClassic.Subscriptions.ConnectionStatus
+HotChocolate.AspNetClassic.Subscriptions.ConnectionStatus.Accepted.get -> bool
+HotChocolate.AspNetClassic.Subscriptions.ConnectionStatus.Extensions.get -> System.Collections.Generic.IReadOnlyDictionary<string!, object?>?
+HotChocolate.AspNetClassic.Subscriptions.ConnectionStatus.Message.get -> string!
+HotChocolate.AspNetClassic.Subscriptions.IMessagePipeline
+HotChocolate.AspNetClassic.Subscriptions.IMessagePipeline.ProcessAsync(HotChocolate.AspNetClassic.Subscriptions.ISocketConnection! connection, System.Buffers.ReadOnlySequence<byte> slice, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.Task!
+HotChocolate.AspNetClassic.Subscriptions.ISocketConnection
+HotChocolate.AspNetClassic.Subscriptions.ISocketConnection.CloseAsync(string! message, HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus closeStatus, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.Task!
+HotChocolate.AspNetClassic.Subscriptions.ISocketConnection.Closed.get -> bool
+HotChocolate.AspNetClassic.Subscriptions.ISocketConnection.HttpContext.get -> Microsoft.AspNetClassic.Http.HttpContext!
+HotChocolate.AspNetClassic.Subscriptions.ISocketConnection.ReceiveAsync(System.IO.Pipelines.PipeWriter! writer, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.Task!
+HotChocolate.AspNetClassic.Subscriptions.ISocketConnection.RequestAborted.get -> System.Threading.CancellationToken
+HotChocolate.AspNetClassic.Subscriptions.ISocketConnection.RequestServices.get -> System.IServiceProvider!
+HotChocolate.AspNetClassic.Subscriptions.ISocketConnection.SendAsync(byte[]! message, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.Task!
+HotChocolate.AspNetClassic.Subscriptions.ISocketConnection.Subscriptions.get -> HotChocolate.AspNetClassic.Subscriptions.ISubscriptionManager!
+HotChocolate.AspNetClassic.Subscriptions.ISocketConnection.TryOpenAsync() -> System.Threading.Tasks.Task<bool>!
+HotChocolate.AspNetClassic.Subscriptions.ISocketSession
+HotChocolate.AspNetClassic.Subscriptions.ISocketSession.HandleAsync(System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.Task!
+HotChocolate.AspNetClassic.Subscriptions.ISubscriptionManager
+HotChocolate.AspNetClassic.Subscriptions.ISubscriptionManager.Register(HotChocolate.AspNetClassic.Subscriptions.ISubscriptionSession! subscriptionSession) -> void
+HotChocolate.AspNetClassic.Subscriptions.ISubscriptionManager.Unregister(string! subscriptionId) -> void
+HotChocolate.AspNetClassic.Subscriptions.ISubscriptionSession
+HotChocolate.AspNetClassic.Subscriptions.ISubscriptionSession.Completed -> System.EventHandler?
+HotChocolate.AspNetClassic.Subscriptions.ISubscriptionSession.Id.get -> string!
+HotChocolate.AspNetClassic.Subscriptions.ISubscriptionSession.Subscription.get -> HotChocolate.Execution.Processing.ISubscription!
+HotChocolate.AspNetClassic.Subscriptions.Messages.AcceptConnectionMessage
+HotChocolate.AspNetClassic.Subscriptions.Messages.AcceptConnectionMessage.AcceptConnectionMessage() -> void
+HotChocolate.AspNetClassic.Subscriptions.Messages.DataCompleteMessage
+HotChocolate.AspNetClassic.Subscriptions.Messages.DataCompleteMessage.DataCompleteMessage(string! id) -> void
+HotChocolate.AspNetClassic.Subscriptions.Messages.DataResultMessage
+HotChocolate.AspNetClassic.Subscriptions.Messages.DataResultMessage.DataResultMessage(string! id, HotChocolate.Execution.IQueryResult! payload) -> void
+HotChocolate.AspNetClassic.Subscriptions.Messages.DataStartMessage
+HotChocolate.AspNetClassic.Subscriptions.Messages.DataStartMessage.DataStartMessage(string! id, HotChocolate.Language.GraphQLRequest! request) -> void
+HotChocolate.AspNetClassic.Subscriptions.Messages.DataStartMessageHandler
+HotChocolate.AspNetClassic.Subscriptions.Messages.DataStartMessageHandler.DataStartMessageHandler(HotChocolate.Execution.IRequestExecutor! requestExecutor, HotChocolate.AspNetClassic.ISocketSessionInterceptor! socketSessionInterceptor, HotChocolate.IErrorHandler! errorHandler, HotChocolate.Execution.Instrumentation.IExecutionDiagnosticEvents! diagnosticEvents) -> void
+HotChocolate.AspNetClassic.Subscriptions.Messages.DataStopMessage
+HotChocolate.AspNetClassic.Subscriptions.Messages.DataStopMessage.DataStopMessage(string! id) -> void
+HotChocolate.AspNetClassic.Subscriptions.Messages.DataStopMessageHandler
+HotChocolate.AspNetClassic.Subscriptions.Messages.DataStopMessageHandler.DataStopMessageHandler() -> void
+HotChocolate.AspNetClassic.Subscriptions.Messages.IMessageHandler
+HotChocolate.AspNetClassic.Subscriptions.Messages.IMessageHandler.CanHandle(HotChocolate.AspNetClassic.Subscriptions.Messages.OperationMessage! message) -> bool
+HotChocolate.AspNetClassic.Subscriptions.Messages.IMessageHandler.HandleAsync(HotChocolate.AspNetClassic.Subscriptions.ISocketConnection! connection, HotChocolate.AspNetClassic.Subscriptions.Messages.OperationMessage! message, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.Task!
+HotChocolate.AspNetClassic.Subscriptions.Messages.InitializeConnectionMessage
+HotChocolate.AspNetClassic.Subscriptions.Messages.InitializeConnectionMessage.InitializeConnectionMessage(System.Collections.Generic.IReadOnlyDictionary<string!, object?>? payload = null) -> void
+HotChocolate.AspNetClassic.Subscriptions.Messages.InitializeConnectionMessageHandler
+HotChocolate.AspNetClassic.Subscriptions.Messages.InitializeConnectionMessageHandler.InitializeConnectionMessageHandler(HotChocolate.AspNetClassic.ISocketSessionInterceptor! socketSessionInterceptor) -> void
+HotChocolate.AspNetClassic.Subscriptions.Messages.KeepConnectionAliveMessage
+HotChocolate.AspNetClassic.Subscriptions.Messages.KeepConnectionAliveMessage.KeepConnectionAliveMessage() -> void
+HotChocolate.AspNetClassic.Subscriptions.Messages.MessageHandler<T>
+HotChocolate.AspNetClassic.Subscriptions.Messages.MessageHandler<T>.CanHandle(HotChocolate.AspNetClassic.Subscriptions.Messages.OperationMessage! message) -> bool
+HotChocolate.AspNetClassic.Subscriptions.Messages.MessageHandler<T>.HandleAsync(HotChocolate.AspNetClassic.Subscriptions.ISocketConnection! connection, HotChocolate.AspNetClassic.Subscriptions.Messages.OperationMessage! message, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.Task!
+HotChocolate.AspNetClassic.Subscriptions.Messages.MessageHandler<T>.MessageHandler() -> void
+HotChocolate.AspNetClassic.Subscriptions.Messages.OperationMessage
+HotChocolate.AspNetClassic.Subscriptions.Messages.OperationMessage.OperationMessage(string! type, string! id) -> void
+HotChocolate.AspNetClassic.Subscriptions.Messages.OperationMessage.OperationMessage(string! type) -> void
+HotChocolate.AspNetClassic.Subscriptions.Messages.OperationMessage.Type.get -> string!
+HotChocolate.AspNetClassic.Subscriptions.Messages.OperationMessage<T>
+HotChocolate.AspNetClassic.Subscriptions.Messages.OperationMessage<T>.OperationMessage(string! type, string! id, T payload) -> void
+HotChocolate.AspNetClassic.Subscriptions.Messages.OperationMessage<T>.OperationMessage(string! type, T payload) -> void
+HotChocolate.AspNetClassic.Subscriptions.Messages.OperationMessage<T>.Payload.get -> T
+HotChocolate.AspNetClassic.Subscriptions.Messages.RejectConnectionMessage
+HotChocolate.AspNetClassic.Subscriptions.Messages.RejectConnectionMessage.RejectConnectionMessage(string! message, System.Collections.Generic.IReadOnlyDictionary<string!, object?>? extensions = null) -> void
+HotChocolate.AspNetClassic.Subscriptions.Messages.TerminateConnectionMessage
+HotChocolate.AspNetClassic.Subscriptions.Messages.TerminateConnectionMessage.TerminateConnectionMessage() -> void
+HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus
+HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus.EndpointUnavailable = 2 -> HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus
+HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus.InternalServerError = 9 -> HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus
+HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus.InvalidMessageType = 4 -> HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus
+HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus.InvalidPayloadData = 5 -> HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus
+HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus.MandatoryExtension = 8 -> HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus
+HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus.MessageTooBig = 7 -> HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus
+HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus.None = 0 -> HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus
+HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus.NormalClosure = 1 -> HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus
+HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus.PolicyViolation = 6 -> HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus
+HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus.ProtocolError = 3 -> HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus
+HotChocolate.AspNetClassic.Subscriptions.SubscriptionManager
+HotChocolate.AspNetClassic.Subscriptions.SubscriptionManager.Dispose() -> void
+HotChocolate.AspNetClassic.Subscriptions.SubscriptionManager.GetEnumerator() -> System.Collections.Generic.IEnumerator<HotChocolate.AspNetClassic.Subscriptions.ISubscriptionSession!>!
+HotChocolate.AspNetClassic.Subscriptions.SubscriptionManager.Register(HotChocolate.AspNetClassic.Subscriptions.ISubscriptionSession! subscriptionSession) -> void
+HotChocolate.AspNetClassic.Subscriptions.SubscriptionManager.SubscriptionManager(HotChocolate.AspNetClassic.Subscriptions.ISocketConnection! connection) -> void
+HotChocolate.AspNetClassic.Subscriptions.SubscriptionManager.Unregister(string! subscriptionId) -> void
+HotChocolate.AspNetClassic.Subscriptions.WebSocketConnection
+HotChocolate.AspNetClassic.Subscriptions.WebSocketConnection.CloseAsync(string! message, HotChocolate.AspNetClassic.Subscriptions.SocketCloseStatus closeStatus, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.Task!
+HotChocolate.AspNetClassic.Subscriptions.WebSocketConnection.Closed.get -> bool
+HotChocolate.AspNetClassic.Subscriptions.WebSocketConnection.Dispose() -> void
+HotChocolate.AspNetClassic.Subscriptions.WebSocketConnection.HttpContext.get -> Microsoft.AspNetClassic.Http.HttpContext!
+HotChocolate.AspNetClassic.Subscriptions.WebSocketConnection.ReceiveAsync(System.IO.Pipelines.PipeWriter! writer, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.Task!
+HotChocolate.AspNetClassic.Subscriptions.WebSocketConnection.RequestAborted.get -> System.Threading.CancellationToken
+HotChocolate.AspNetClassic.Subscriptions.WebSocketConnection.RequestServices.get -> System.IServiceProvider!
+HotChocolate.AspNetClassic.Subscriptions.WebSocketConnection.SendAsync(byte[]! message, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.Task!
+HotChocolate.AspNetClassic.Subscriptions.WebSocketConnection.Subscriptions.get -> HotChocolate.AspNetClassic.Subscriptions.ISubscriptionManager!
+HotChocolate.AspNetClassic.Subscriptions.WebSocketConnection.TryOpenAsync() -> System.Threading.Tasks.Task<bool>!
+HotChocolate.AspNetClassic.Subscriptions.WebSocketConnection.WebSockets.get -> Microsoft.AspNetClassic.Http.WebSocketManager!
+HotChocolate.AspNetClassic.Subscriptions.WebSocketSession
+HotChocolate.AspNetClassic.Subscriptions.WebSocketSession.Dispose() -> void
+HotChocolate.AspNetClassic.Subscriptions.WebSocketSession.HandleAsync(System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.Task!
+HotChocolate.AspNetClassic.ToolDefaultFileMiddleware
+HotChocolate.AspNetClassic.ToolDefaultFileMiddleware.Invoke(Microsoft.AspNetClassic.Http.HttpContext! context) -> System.Threading.Tasks.Task!
+HotChocolate.AspNetClassic.ToolDefaultFileMiddleware.ToolDefaultFileMiddleware(Microsoft.AspNetClassic.Http.RequestDelegate! next, Microsoft.Extensions.FileProviders.IFileProvider! fileProvider, Microsoft.AspNetClassic.Http.PathString matchUrl) -> void
+HotChocolate.AspNetClassic.ToolOptionsFileMiddleware
+HotChocolate.AspNetClassic.ToolOptionsFileMiddleware.Invoke(Microsoft.AspNetClassic.Http.HttpContext! context) -> System.Threading.Tasks.Task!
+HotChocolate.AspNetClassic.ToolOptionsFileMiddleware.ToolOptionsFileMiddleware(Microsoft.AspNetClassic.Http.RequestDelegate! next, Microsoft.AspNetClassic.Http.PathString matchUrl) -> void
+HotChocolate.AspNetClassic.ToolStaticFileMiddleware
+HotChocolate.AspNetClassic.ToolStaticFileMiddleware.Invoke(Microsoft.AspNetClassic.Http.HttpContext! context) -> System.Threading.Tasks.Task!
+HotChocolate.AspNetClassic.ToolStaticFileMiddleware.ToolStaticFileMiddleware(Microsoft.AspNetClassic.Http.RequestDelegate! next, Microsoft.Extensions.FileProviders.IFileProvider! fileProvider, Microsoft.AspNetClassic.Http.PathString matchUrl) -> void
+HotChocolate.AspNetClassic.WebSocketSubscriptionMiddleware
+HotChocolate.AspNetClassic.WebSocketSubscriptionMiddleware.InvokeAsync(Microsoft.AspNetClassic.Http.HttpContext! context) -> System.Threading.Tasks.Task!
+HotChocolate.AspNetClassic.WebSocketSubscriptionMiddleware.WebSocketSubscriptionMiddleware(Microsoft.AspNetClassic.Http.RequestDelegate! next, HotChocolate.Execution.IRequestExecutorResolver! executorResolver, HotChocolate.AspNetClassic.Serialization.IHttpResultSerializer! resultSerializer, HotChocolate.NameString schemaName) -> void
+Microsoft.AspNetClassic.Builder.EndpointRouteBuilderExtensions
+Microsoft.Extensions.DependencyInjection.HotChocolateAspNetClassicServiceCollectionExtensions
+override HotChocolate.AspNetClassic.HttpMultipartMiddleware.GetRequestsFromBody(Microsoft.AspNetClassic.Http.HttpRequest! httpRequest, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.ValueTask<System.Collections.Generic.IReadOnlyList<HotChocolate.Language.GraphQLRequest!>!>
+override HotChocolate.AspNetClassic.HttpMultipartMiddleware.InvokeAsync(Microsoft.AspNetClassic.Http.HttpContext! context) -> System.Threading.Tasks.Task!
+override HotChocolate.AspNetClassic.Subscriptions.Messages.DataCompleteMessage.Id.get -> string!
+override HotChocolate.AspNetClassic.Subscriptions.Messages.DataStartMessage.Id.get -> string!
+override HotChocolate.AspNetClassic.Subscriptions.Messages.DataStopMessage.Id.get -> string!
+static HotChocolate.AspNetClassic.MiddlewareBase.ParseContentType(Microsoft.AspNetClassic.Http.HttpContext! context) -> HotChocolate.AspNetClassic.AllowedContentType
+static HotChocolate.AspNetClassic.Subscriptions.ConnectionStatus.Accept() -> HotChocolate.AspNetClassic.Subscriptions.ConnectionStatus!
+static HotChocolate.AspNetClassic.Subscriptions.ConnectionStatus.Reject() -> HotChocolate.AspNetClassic.Subscriptions.ConnectionStatus!
+static HotChocolate.AspNetClassic.Subscriptions.ConnectionStatus.Reject(string! message, System.Collections.Generic.IReadOnlyDictionary<string!, object?>? extensions) -> HotChocolate.AspNetClassic.Subscriptions.ConnectionStatus!
+static HotChocolate.AspNetClassic.Subscriptions.ConnectionStatus.Reject(string! message) -> HotChocolate.AspNetClassic.Subscriptions.ConnectionStatus!
+static HotChocolate.AspNetClassic.Subscriptions.ConnectionStatus.Reject(System.Collections.Generic.IReadOnlyDictionary<string!, object?>! extensions) -> HotChocolate.AspNetClassic.Subscriptions.ConnectionStatus!
+static HotChocolate.AspNetClassic.Subscriptions.Messages.AcceptConnectionMessage.Default.get -> HotChocolate.AspNetClassic.Subscriptions.Messages.AcceptConnectionMessage!
+static HotChocolate.AspNetClassic.Subscriptions.Messages.KeepConnectionAliveMessage.Default.get -> HotChocolate.AspNetClassic.Subscriptions.Messages.KeepConnectionAliveMessage!
+static HotChocolate.AspNetClassic.Subscriptions.Messages.TerminateConnectionMessage.Default.get -> HotChocolate.AspNetClassic.Subscriptions.Messages.TerminateConnectionMessage!
+static HotChocolate.AspNetClassic.Subscriptions.WebSocketConnection.New(Microsoft.AspNetClassic.Http.HttpContext! httpContext) -> HotChocolate.AspNetClassic.Subscriptions.WebSocketConnection!
+static HotChocolate.AspNetClassic.Subscriptions.WebSocketSession.New(Microsoft.AspNetClassic.Http.HttpContext! httpContext, HotChocolate.AspNetClassic.Subscriptions.IMessagePipeline! messagePipeline, HotChocolate.AspNetClassic.ISocketSessionInterceptor! socketSessionInterceptor) -> HotChocolate.AspNetClassic.Subscriptions.WebSocketSession!
+static Microsoft.AspNetClassic.Builder.EndpointRouteBuilderExtensions.MapBananaCakePop(this Microsoft.AspNetClassic.Routing.IEndpointRouteBuilder! endpointRouteBuilder, Microsoft.AspNetClassic.Http.PathString? toolPath = null, string? relativeRequestPath = "..") -> HotChocolate.AspNetClassic.Extensions.BananaCakePopEndpointConventionBuilder!
+static Microsoft.AspNetClassic.Builder.EndpointRouteBuilderExtensions.MapGraphQL(this Microsoft.AspNetClassic.Routing.IEndpointRouteBuilder! endpointRouteBuilder, Microsoft.AspNetClassic.Http.PathString path, HotChocolate.NameString schemaName = default(HotChocolate.NameString)) -> HotChocolate.AspNetClassic.Extensions.GraphQLEndpointConventionBuilder!
+static Microsoft.AspNetClassic.Builder.EndpointRouteBuilderExtensions.MapGraphQL(this Microsoft.AspNetClassic.Routing.IEndpointRouteBuilder! endpointRouteBuilder, string! path = "/graphql", HotChocolate.NameString schemaName = default(HotChocolate.NameString)) -> HotChocolate.AspNetClassic.Extensions.GraphQLEndpointConventionBuilder!
+static Microsoft.AspNetClassic.Builder.EndpointRouteBuilderExtensions.MapGraphQLHttp(this Microsoft.AspNetClassic.Routing.IEndpointRouteBuilder! endpointRouteBuilder, Microsoft.AspNetClassic.Routing.Patterns.RoutePattern? pattern = null, HotChocolate.NameString schemaName = default(HotChocolate.NameString)) -> HotChocolate.AspNetClassic.Extensions.GraphQLHttpEndpointConventionBuilder!
+static Microsoft.AspNetClassic.Builder.EndpointRouteBuilderExtensions.MapGraphQLHttp(this Microsoft.AspNetClassic.Routing.IEndpointRouteBuilder! endpointRouteBuilder, string! pattern, HotChocolate.NameString schemaName = default(HotChocolate.NameString)) -> HotChocolate.AspNetClassic.Extensions.GraphQLHttpEndpointConventionBuilder!
+static Microsoft.AspNetClassic.Builder.EndpointRouteBuilderExtensions.MapGraphQLSchema(this Microsoft.AspNetClassic.Routing.IEndpointRouteBuilder! endpointRouteBuilder, Microsoft.AspNetClassic.Routing.Patterns.RoutePattern? pattern = null, HotChocolate.NameString schemaName = default(HotChocolate.NameString)) -> Microsoft.AspNetClassic.Builder.IEndpointConventionBuilder!
+static Microsoft.AspNetClassic.Builder.EndpointRouteBuilderExtensions.MapGraphQLSchema(this Microsoft.AspNetClassic.Routing.IEndpointRouteBuilder! endpointRouteBuilder, string! pattern, HotChocolate.NameString schemaName = default(HotChocolate.NameString)) -> Microsoft.AspNetClassic.Builder.IEndpointConventionBuilder!
+static Microsoft.AspNetClassic.Builder.EndpointRouteBuilderExtensions.MapGraphQLWebSocket(this Microsoft.AspNetClassic.Routing.IEndpointRouteBuilder! endpointRouteBuilder, Microsoft.AspNetClassic.Routing.Patterns.RoutePattern? pattern = null, HotChocolate.NameString schemaName = default(HotChocolate.NameString)) -> Microsoft.AspNetClassic.Builder.IEndpointConventionBuilder!
+static Microsoft.AspNetClassic.Builder.EndpointRouteBuilderExtensions.MapGraphQLWebSocket(this Microsoft.AspNetClassic.Routing.IEndpointRouteBuilder! endpointRouteBuilder, string! pattern, HotChocolate.NameString schemaName = default(HotChocolate.NameString)) -> Microsoft.AspNetClassic.Builder.IEndpointConventionBuilder!
+static Microsoft.AspNetClassic.Builder.EndpointRouteBuilderExtensions.WithOptions(this HotChocolate.AspNetClassic.Extensions.BananaCakePopEndpointConventionBuilder! builder, HotChocolate.AspNetClassic.GraphQLToolOptions! toolOptions) -> HotChocolate.AspNetClassic.Extensions.BananaCakePopEndpointConventionBuilder!
+static Microsoft.AspNetClassic.Builder.EndpointRouteBuilderExtensions.WithOptions(this HotChocolate.AspNetClassic.Extensions.GraphQLEndpointConventionBuilder! builder, HotChocolate.AspNetClassic.GraphQLServerOptions! serverOptions) -> HotChocolate.AspNetClassic.Extensions.GraphQLEndpointConventionBuilder!
+static Microsoft.AspNetClassic.Builder.EndpointRouteBuilderExtensions.WithOptions(this HotChocolate.AspNetClassic.Extensions.GraphQLHttpEndpointConventionBuilder! builder, HotChocolate.AspNetClassic.GraphQLHttpOptions! httpOptions) -> HotChocolate.AspNetClassic.Extensions.GraphQLHttpEndpointConventionBuilder!
+static Microsoft.Extensions.DependencyInjection.HotChocolateAspNetClassicServiceCollectionExtensions.AddGraphQL(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, HotChocolate.ISchema! schema, int maxAllowedRequestSize = 20000000) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Microsoft.Extensions.DependencyInjection.HotChocolateAspNetClassicServiceCollectionExtensions.AddGraphQL(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, HotChocolate.ISchemaBuilder! schemaBuilder, int maxAllowedRequestSize = 20000000) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Microsoft.Extensions.DependencyInjection.HotChocolateAspNetClassicServiceCollectionExtensions.AddGraphQL(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, System.Func<System.IServiceProvider!, HotChocolate.ISchema!>! schemaFactory, int maxAllowedRequestSize = 20000000) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Microsoft.Extensions.DependencyInjection.HotChocolateAspNetClassicServiceCollectionExtensions.AddGraphQLServer(this HotChocolate.Execution.Configuration.IRequestExecutorBuilder! builder, HotChocolate.NameString schemaName = default(HotChocolate.NameString)) -> HotChocolate.Execution.Configuration.IRequestExecutorBuilder!
+static Microsoft.Extensions.DependencyInjection.HotChocolateAspNetClassicServiceCollectionExtensions.AddGraphQLServer(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, HotChocolate.NameString schemaName = default(HotChocolate.NameString), int maxAllowedRequestSize = 20000000) -> HotChocolate.Execution.Configuration.IRequestExecutorBuilder!
+static Microsoft.Extensions.DependencyInjection.HotChocolateAspNetClassicServiceCollectionExtensions.AddGraphQLServerCore(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, int maxAllowedRequestSize = 20000000) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Microsoft.Extensions.DependencyInjection.HotChocolateAspNetClassicServiceCollectionExtensions.AddHttpRequestInterceptor(this HotChocolate.Execution.Configuration.IRequestExecutorBuilder! builder, HotChocolate.AspNetClassic.HttpRequestInterceptorDelegate! interceptor) -> HotChocolate.Execution.Configuration.IRequestExecutorBuilder!
+static Microsoft.Extensions.DependencyInjection.HotChocolateAspNetClassicServiceCollectionExtensions.AddHttpRequestInterceptor<T>(this HotChocolate.Execution.Configuration.IRequestExecutorBuilder! builder, System.Func<System.IServiceProvider!, T!>! factory) -> HotChocolate.Execution.Configuration.IRequestExecutorBuilder!
+static Microsoft.Extensions.DependencyInjection.HotChocolateAspNetClassicServiceCollectionExtensions.AddHttpRequestInterceptor<T>(this HotChocolate.Execution.Configuration.IRequestExecutorBuilder! builder) -> HotChocolate.Execution.Configuration.IRequestExecutorBuilder!
+static Microsoft.Extensions.DependencyInjection.HotChocolateAspNetClassicServiceCollectionExtensions.AddHttpResultSerializer(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, HotChocolate.AspNetClassic.Serialization.HttpResultSerialization batchSerialization = HotChocolate.AspNetClassic.Serialization.HttpResultSerialization.MultiPartChunked, HotChocolate.AspNetClassic.Serialization.HttpResultSerialization deferSerialization = HotChocolate.AspNetClassic.Serialization.HttpResultSerialization.MultiPartChunked, bool indented = false) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Microsoft.Extensions.DependencyInjection.HotChocolateAspNetClassicServiceCollectionExtensions.AddHttpResultSerializer<T>(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Microsoft.Extensions.DependencyInjection.HotChocolateAspNetClassicServiceCollectionExtensions.AddSocketSessionInterceptor<T>(this HotChocolate.Execution.Configuration.IRequestExecutorBuilder! builder, System.Func<System.IServiceProvider!, T!>! factory) -> HotChocolate.Execution.Configuration.IRequestExecutorBuilder!
+static Microsoft.Extensions.DependencyInjection.HotChocolateAspNetClassicServiceCollectionExtensions.AddSocketSessionInterceptor<T>(this HotChocolate.Execution.Configuration.IRequestExecutorBuilder! builder) -> HotChocolate.Execution.Configuration.IRequestExecutorBuilder!
+static Microsoft.Extensions.DependencyInjection.HotChocolateAspNetClassicServiceCollectionExtensions.InitializeOnStartup(this HotChocolate.Execution.Configuration.IRequestExecutorBuilder! builder) -> HotChocolate.Execution.Configuration.IRequestExecutorBuilder!
+virtual HotChocolate.AspNetClassic.DefaultHttpRequestInterceptor.OnCreateAsync(Microsoft.AspNetClassic.Http.HttpContext! context, HotChocolate.Execution.IRequestExecutor! requestExecutor, HotChocolate.Execution.IQueryRequestBuilder! requestBuilder, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.ValueTask
+virtual HotChocolate.AspNetClassic.DefaultSocketSessionInterceptor.OnCloseAsync(HotChocolate.AspNetClassic.Subscriptions.ISocketConnection! connection, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.ValueTask
+virtual HotChocolate.AspNetClassic.DefaultSocketSessionInterceptor.OnConnectAsync(HotChocolate.AspNetClassic.Subscriptions.ISocketConnection! connection, HotChocolate.AspNetClassic.Subscriptions.Messages.InitializeConnectionMessage! message, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.ValueTask<HotChocolate.AspNetClassic.Subscriptions.ConnectionStatus!>
+virtual HotChocolate.AspNetClassic.DefaultSocketSessionInterceptor.OnRequestAsync(HotChocolate.AspNetClassic.Subscriptions.ISocketConnection! connection, HotChocolate.Execution.IQueryRequestBuilder! requestBuilder, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.ValueTask
+virtual HotChocolate.AspNetClassic.HttpPostMiddleware.GetRequestsFromBody(Microsoft.AspNetClassic.Http.HttpRequest! request, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.ValueTask<System.Collections.Generic.IReadOnlyList<HotChocolate.Language.GraphQLRequest!>!>
+virtual HotChocolate.AspNetClassic.HttpPostMiddleware.InvokeAsync(Microsoft.AspNetClassic.Http.HttpContext! context) -> System.Threading.Tasks.Task!
+virtual HotChocolate.AspNetClassic.MiddlewareBase.Dispose(bool disposing) -> void
+virtual HotChocolate.AspNetClassic.Serialization.DefaultHttpResultSerializer.GetContentType(HotChocolate.Execution.IExecutionResult! result) -> string!
+virtual HotChocolate.AspNetClassic.Serialization.DefaultHttpResultSerializer.GetStatusCode(HotChocolate.Execution.IExecutionResult! result) -> System.Net.HttpStatusCode
+virtual HotChocolate.AspNetClassic.Serialization.DefaultHttpResultSerializer.SerializeAsync(HotChocolate.Execution.IExecutionResult! result, System.IO.Stream! stream, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.ValueTask
+virtual HotChocolate.AspNetClassic.Subscriptions.Messages.MessageHandler<T>.CanHandle(T! message) -> bool
+virtual HotChocolate.AspNetClassic.Subscriptions.Messages.OperationMessage.Id.get -> string?
+virtual HotChocolate.AspNetClassic.Subscriptions.SubscriptionManager.Dispose(bool disposing) -> void

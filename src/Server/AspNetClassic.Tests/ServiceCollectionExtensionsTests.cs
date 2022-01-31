@@ -24,7 +24,7 @@ namespace HotChocolate.AspNetClassic
                 services,
                 SchemaBuilder.New()
                     .AddDocumentFromString("type Query { a: String }")
-                    .Use(next => context => Task.CompletedTask));
+                    .Use(next => context => new ValueTask(Task.CompletedTask)));
 
             // assert
             services.Select(t => ReflectionUtils.GetTypeName(t.ServiceType))

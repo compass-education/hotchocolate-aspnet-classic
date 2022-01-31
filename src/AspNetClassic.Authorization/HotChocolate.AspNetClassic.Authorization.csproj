@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>$(LibraryTargetFrameworks)</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>HotChocolate.AspNetClassic.Authorization</PackageId>
+    <AssemblyName>HotChocolate.AspNetClassic.Authorization</AssemblyName>
+    <RootNamespace>HotChocolate.AspNetClassic.Authorization</RootNamespace>
+    <Description>This package contains the ASP.NET Core authorization integrations for Hot Chocolate.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HotChocolate.Execution" Version="12.6.0" />
+    <PackageReference Include="HotChocolate.Types" Version="12.6.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.4" />
+    <PackageReference Include="Microsoft.AspNetClassic.Authorization" Version="3.1.4" />
+  </ItemGroup>
+
+</Project>
