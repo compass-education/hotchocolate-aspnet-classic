@@ -13,7 +13,7 @@ public class DefaultHttpRequestInterceptor : IHttpRequestInterceptor
     {
         requestBuilder.TrySetServices(context.RequestServices);
         requestBuilder.TryAddProperty(nameof(HttpContext), context);
-        requestBuilder.TryAddProperty(nameof(ClaimsPrincipal), context.User);
+        requestBuilder.TryAddProperty(nameof(ClaimsPrincipal), context.Authentication.User);
         requestBuilder.TryAddProperty(nameof(CancellationToken), context.Request.CallCancelled);
 
         if (context.IsTracingEnabled())

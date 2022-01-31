@@ -24,7 +24,7 @@ public class DefaultSocketSessionInterceptor : ISocketSessionInterceptor
         requestBuilder.TrySetServices(connection.RequestServices);
         requestBuilder.TryAddProperty(nameof(CancellationToken), connection.RequestAborted);
         requestBuilder.TryAddProperty(nameof(HttpContext), context);
-        requestBuilder.TryAddProperty(nameof(ClaimsPrincipal), context.User);
+        requestBuilder.TryAddProperty(nameof(ClaimsPrincipal), context.Authentication.User);
 
         if (context.IsTracingEnabled())
         {
