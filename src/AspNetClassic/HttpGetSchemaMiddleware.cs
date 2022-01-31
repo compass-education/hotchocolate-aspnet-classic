@@ -64,14 +64,16 @@ public sealed class HttpGetSchemaMiddleware : MiddlewareBase
         ISchema schema = await GetSchemaAsync(context.Request.CallCancelled);
         context.Environment[WellKnownContextData.Schema] = schema;
 
+        var queryParamsDict = context.Request.Query.ToDictionary(x => x.Key, x => x.Value);
+        
         bool indent =
-            !(context.Request.Query.Get("indentation") != null &&
-                string.Equals(
-                    context.Request.Query["indentation"].FirstOrDefault(),
-                    "none",
-                    StringComparison.OrdinalIgnoreCase));
+            !(queryParamsDict.ContainsKey("indentation") &&
+              string.Equals(
+                  queryParamsDict["indentation"].FirstOrDefault(),
+                  "none",
+                  StringComparison.OrdinalIgnoreCase));
 
-        if (context.Request.Query.TryGetValue("types", out Microsoft.Extensions.Primitives.StringValues typesValue))
+        if (queryParamsDict.TryGetValue("types", out var typesValue))
         {
             if (string.IsNullOrEmpty(typesValue))
             {
