@@ -30,7 +30,7 @@ public static class EndpointRouteBuilderExtensions
     /// configuration can be chained.
     /// </returns>
     public static GraphQLEndpointConventionBuilder MapGraphQL(
-        this IEndpointRouteBuilder endpointRouteBuilder,
+        this IApplicationBuilder endpointRouteBuilder,
         string path = "/graphql",
         NameString schemaName = default)
         => MapGraphQL(endpointRouteBuilder, new PathString(path), schemaName);
@@ -55,7 +55,7 @@ public static class EndpointRouteBuilderExtensions
     /// The <paramref name="endpointRouteBuilder" /> is <c>null</c>.
     /// </exception>
     public static GraphQLEndpointConventionBuilder MapGraphQL(
-        this IEndpointRouteBuilder endpointRouteBuilder,
+        this IApplicationBuilder endpointRouteBuilder,
         PathString path,
         NameString schemaName = default)
     {
@@ -67,7 +67,7 @@ public static class EndpointRouteBuilderExtensions
         path = path.ToString().TrimEnd('/');
 
         RoutePattern pattern = Parse(path + "/{**slug}");
-        IApplicationBuilder requestPipeline = endpointRouteBuilder.CreateApplicationBuilder();
+        var requestPipeline = endpointRouteBuilder.CreateApplicationBuilder();
         NameString schemaNameOrDefault = schemaName.HasValue ? schemaName : Schema.DefaultName;
         IFileProvider fileProvider = CreateFileProvider();
 
@@ -115,7 +115,7 @@ public static class EndpointRouteBuilderExtensions
     /// The <paramref name="endpointRouteBuilder" /> is <c>null</c>.
     /// </exception>
     public static GraphQLHttpEndpointConventionBuilder MapGraphQLHttp(
-        this IEndpointRouteBuilder endpointRouteBuilder,
+        this IApplicationBuilder endpointRouteBuilder,
         string pattern,
         NameString schemaName = default)
         => MapGraphQLHttp(endpointRouteBuilder, Parse(pattern), schemaName);
@@ -140,7 +140,7 @@ public static class EndpointRouteBuilderExtensions
     /// The <paramref name="endpointRouteBuilder" /> is <c>null</c>.
     /// </exception>
     public static GraphQLHttpEndpointConventionBuilder MapGraphQLHttp(
-        this IEndpointRouteBuilder endpointRouteBuilder,
+        this IApplicationBuilder endpointRouteBuilder,
         RoutePattern? pattern = default,
         NameString schemaName = default)
     {
@@ -190,8 +190,8 @@ public static class EndpointRouteBuilderExtensions
     /// <exception cref="ArgumentNullException">
     /// The <paramref name="endpointRouteBuilder" /> is <c>null</c>.
     /// </exception>
-    public static IEndpointConventionBuilder MapGraphQLWebSocket(
-        this IEndpointRouteBuilder endpointRouteBuilder,
+    public static IApplicationBuilder MapGraphQLWebSocket(
+        this IApplicationBuilder endpointRouteBuilder,
         string pattern,
         NameString schemaName = default)
         => MapGraphQLWebSocket(endpointRouteBuilder, Parse(pattern), schemaName);
@@ -215,8 +215,8 @@ public static class EndpointRouteBuilderExtensions
     /// <exception cref="ArgumentNullException">
     /// The <paramref name="endpointRouteBuilder" /> is <c>null</c>.
     /// </exception>
-    public static IEndpointConventionBuilder MapGraphQLWebSocket(
-        this IEndpointRouteBuilder endpointRouteBuilder,
+    public static IApplicationBuilder MapGraphQLWebSocket(
+        this IApplicationBuilder endpointRouteBuilder,
         RoutePattern? pattern = default,
         NameString schemaName = default)
     {
@@ -264,8 +264,8 @@ public static class EndpointRouteBuilderExtensions
     /// <exception cref="ArgumentNullException">
     /// The <paramref name="endpointRouteBuilder" /> is <c>null</c>.
     /// </exception>
-    public static IEndpointConventionBuilder MapGraphQLSchema(
-        this IEndpointRouteBuilder endpointRouteBuilder,
+    public static IApplicationBuilder MapGraphQLSchema(
+        this IApplicationBuilder endpointRouteBuilder,
         string pattern,
         NameString schemaName = default)
         => MapGraphQLSchema(endpointRouteBuilder, Parse(pattern), schemaName);
@@ -289,8 +289,8 @@ public static class EndpointRouteBuilderExtensions
     /// <exception cref="ArgumentNullException">
     /// The <paramref name="endpointRouteBuilder" /> is <c>null</c>.
     /// </exception>
-    public static IEndpointConventionBuilder MapGraphQLSchema(
-        this IEndpointRouteBuilder endpointRouteBuilder,
+    public static IApplicationBuilder MapGraphQLSchema(
+        this IApplicationBuilder endpointRouteBuilder,
         RoutePattern? pattern = default,
         NameString schemaName = default)
     {
@@ -338,7 +338,7 @@ public static class EndpointRouteBuilderExtensions
     /// configuration can be chained.
     /// </returns>
     public static BananaCakePopEndpointConventionBuilder MapBananaCakePop(
-        this IEndpointRouteBuilder endpointRouteBuilder,
+        this IApplicationBuilder endpointRouteBuilder,
         PathString? toolPath = default,
         string? relativeRequestPath = "..")
     {
@@ -365,7 +365,7 @@ public static class EndpointRouteBuilderExtensions
                 return Task.CompletedTask;
             });
 
-        IEndpointConventionBuilder builder = endpointRouteBuilder
+        var builder = endpointRouteBuilder
             .Map(pattern, requestPipeline.Build())
             .WithDisplayName("Banana Cake Pop Pipeline")
             .WithMetadata(new GraphQLEndpointOptions { GraphQLEndpoint = relativeRequestPath });

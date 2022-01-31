@@ -24,8 +24,8 @@ public static partial class HotChocolateAspNetClassicServiceCollectionExtensions
         {
             throw new ArgumentNullException(nameof(builder));
         }
-
-        builder.Services.AddHostedService<ExecutorWarmupService>();
+        // TODO: .Net Framework equivalent
+        /*builder.Services.AddHostedService<ExecutorWarmupService>();*/
         builder.Services.AddSingleton(new WarmupSchema(builder.Name));
         return builder;
     }

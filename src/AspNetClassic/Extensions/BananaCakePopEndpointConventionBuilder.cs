@@ -1,5 +1,7 @@
 using Microsoft.AspNetClassic.Builder;
 
+using IApplicationBuilder = Owin.IAppBuilder;
+
 namespace HotChocolate.AspNetClassic.Extensions;
 
 /// <summary>

@@ -7,7 +7,8 @@ using HotChocolate.Execution;
 
 namespace HotChocolate.AspNetClassic.Warmup;
 
-internal class ExecutorWarmupService : BackgroundService
+internal class ExecutorWarmupService 
+    /*: BackgroundService*/
 {
     private readonly IRequestExecutorResolver _executorResolver;
     private readonly HashSet<NameString> _schemaNames;
@@ -30,7 +31,7 @@ internal class ExecutorWarmupService : BackgroundService
         _schemaNames = new HashSet<NameString>(schemas.Select(t => t.SchemaName));
     }
 
-    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+    /*protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
         foreach (NameString schemaName in _schemaNames)
         {
@@ -46,5 +47,5 @@ internal class ExecutorWarmupService : BackgroundService
 
             await executor.ExecuteAsync(warmupRequest, stoppingToken);
         }
-    }
+    }*/
 }

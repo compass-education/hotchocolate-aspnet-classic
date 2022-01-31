@@ -14,7 +14,6 @@ internal static class HttpResponseExtensions
     private const string _contentDepositionValue = "attachment; filename=\"{0}\"";
     private static readonly JsonSerializerOptions _serializerOptions = new()
     {
-
         DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase
     };
