@@ -30,9 +30,9 @@ public class WebSocketConnection : ISocketConnection
 
     public WebSocketManager WebSockets => HttpContext.WebSockets;
 
-    public IServiceProvider RequestServices => HttpContext.RequestServices;
+    public IServiceProvider RequestServices => HttpContext.ApplicationServices;
 
-    public CancellationToken RequestAborted => HttpContext.RequestAborted;
+    public CancellationToken RequestAborted => HttpContext.Request.CallCancelled;
 
     public async Task<bool> TryOpenAsync()
     {

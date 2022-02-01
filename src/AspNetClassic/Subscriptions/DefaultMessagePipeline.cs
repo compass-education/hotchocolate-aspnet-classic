@@ -120,7 +120,7 @@ internal sealed class DefaultMessagePipeline : IMessagePipeline
 
     private static bool TryDeserializeMessage(
         GraphQLSocketMessage parsedMessage,
-        [NotNullWhen(true)] out OperationMessage? message)
+        out OperationMessage? message)
     {
         switch (parsedMessage.Type)
         {
@@ -154,7 +154,7 @@ internal sealed class DefaultMessagePipeline : IMessagePipeline
 
     private static bool TryDeserializeDataStartMessage(
         GraphQLSocketMessage parsedMessage,
-        [NotNullWhen(true)] out OperationMessage? message)
+        out OperationMessage? message)
     {
         if (parsedMessage.Payload.Length == 0 || parsedMessage.Id is null)
         {

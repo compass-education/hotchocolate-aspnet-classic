@@ -18,7 +18,8 @@ public sealed class RejectConnectionMessage
     {
         Dictionary<string, object?> payload = extensions is null
             ? new Dictionary<string, object?>()
-            : new Dictionary<string, object?>(extensions);
+            : new Dictionary<string, object?>(extensions.ToDictionary(
+                x=> x.Key, x => x.Value));
         payload[nameof(message)] = message;
         return payload;
     }

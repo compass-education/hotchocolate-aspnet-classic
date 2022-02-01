@@ -3,7 +3,6 @@ using System.Net;
 using HotChocolate.AspNetClassic.Instrumentation;
 using HotChocolate.AspNetClassic.Serialization;
 using HotChocolate.Language;
-
 using HttpContext = Microsoft.Owin.IOwinContext;
 using HttpRequest = Microsoft.Owin.IOwinRequest;
 using HttpResponse = Microsoft.Owin.IOwinResponse;
@@ -14,7 +13,7 @@ namespace HotChocolate.AspNetClassic;
 /// <summary>
 /// The Hot Chocolate ASP.NET core middleware base class.
 /// </summary>
-public class MiddlewareBase : IDisposable
+public class MiddlewareBase : HttpRequestDelegate
 {
     private readonly HttpRequestDelegate _next;
     private readonly IHttpResultSerializer _resultSerializer;
@@ -24,7 +23,7 @@ public class MiddlewareBase : IDisposable
         HttpRequestDelegate next,
         IRequestExecutorResolver executorResolver,
         IHttpResultSerializer resultSerializer,
-        NameString schemaName)
+        NameString schemaName) : base(next)
     {
         if (executorResolver == null)
         {
@@ -62,6 +61,11 @@ public class MiddlewareBase : IDisposable
     /// The <see cref="HttpContext"/>.
     /// </param>
     protected Task NextAsync(HttpContext context) => _next.Invoke(context);
+    
+    public override Task Invoke(HttpContext context)
+    {
+        throw new NotImplementedException();
+    }
 
     /// <summary>
     /// Gets the request executor for this middleware.

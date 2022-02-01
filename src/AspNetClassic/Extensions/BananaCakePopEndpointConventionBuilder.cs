@@ -1,5 +1,4 @@
 using Microsoft.AspNetClassic.Builder;
-
 using IApplicationBuilder = Owin.IAppBuilder;
 
 namespace HotChocolate.AspNetClassic.Extensions;
@@ -7,16 +6,29 @@ namespace HotChocolate.AspNetClassic.Extensions;
 /// <summary>
 /// Represents the endpoint convention builder for Banana Cake Pop.
 /// </summary>
-public sealed class BananaCakePopEndpointConventionBuilder : IEndpointConventionBuilder
+public sealed class BananaCakePopEndpointConventionBuilder : IApplicationBuilder
 {
-    private readonly IEndpointConventionBuilder _builder;
+    private readonly IApplicationBuilder _builder;
 
-    internal BananaCakePopEndpointConventionBuilder(IEndpointConventionBuilder builder)
+    internal BananaCakePopEndpointConventionBuilder(IApplicationBuilder builder)
     {
         _builder = builder;
     }
 
-    /// <inheritdoc />
-    public void Add(Action<EndpointBuilder> convention) =>
-        _builder.Add(convention);
+    public IApplicationBuilder Use(object middleware, params object[] args)
+    {
+        return _builder.Use(middleware, args);
+    }
+
+    public object Build(Type returnType)
+    {
+        return _builder.Build(returnType);
+    }
+
+    public IApplicationBuilder New()
+    {
+        return _builder.New();
+    }
+
+    public IDictionary<string, object> Properties => _builder.Properties;
 }

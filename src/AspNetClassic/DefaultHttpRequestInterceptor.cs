@@ -1,4 +1,5 @@
 using System.Security.Claims;
+
 using HttpContext = Microsoft.Owin.IOwinContext;
 
 namespace HotChocolate.AspNetClassic;

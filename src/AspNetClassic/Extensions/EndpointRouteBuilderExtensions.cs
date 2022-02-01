@@ -4,7 +4,8 @@ using HotChocolate;
 using HotChocolate.AspNetClassic;
 using HotChocolate.AspNetClassic.Extensions;
 using Microsoft.Owin;
-using IApplicationBuilder = Microsoft.Owin.Builder.AppBuilder;
+using Owin;
+using IApplicationBuilder = Owin.IAppBuilder;
 
 namespace Microsoft.AspNetClassic.Builder;
 
@@ -64,35 +65,35 @@ public static class EndpointRouteBuilderExtensions
             throw new ArgumentNullException(nameof(endpointRouteBuilder));
         }
 
-        path = path.ToString().TrimEnd('/');
+        path = new PathString(path.ToString().TrimEnd('/') + "/{*slug}");
 
-        RoutePattern pattern = Parse(path + "/{**slug}");
-        var requestPipeline = endpointRouteBuilder.CreateApplicationBuilder();
-        NameString schemaNameOrDefault = schemaName.HasValue ? schemaName : Schema.DefaultName;
-        IFileProvider fileProvider = CreateFileProvider();
+        var schemaNameOrDefault = schemaName.HasValue ? schemaName : Schema.DefaultName;
+        var fileProvider = CreateFileProvider();
 
-        requestPipeline
+        Action<IApplicationBuilder> func = (app) => 
+            app
             .UseCancellation()
-            .UseMiddleware<WebSocketSubscriptionMiddleware>(schemaNameOrDefault)
-            .UseMiddleware<HttpPostMiddleware>(schemaNameOrDefault)
-            .UseMiddleware<HttpMultipartMiddleware>(schemaNameOrDefault)
-            .UseMiddleware<HttpGetSchemaMiddleware>(
+            .Use<WebSocketSubscriptionMiddleware>(schemaNameOrDefault)
+            .Use<HttpPostMiddleware>(schemaNameOrDefault)
+            .Use<HttpMultipartMiddleware>(schemaNameOrDefault)
+            .Use<HttpGetSchemaMiddleware>(
                 schemaNameOrDefault,
                 MiddlewareRoutingType.Integrated)
-            .UseMiddleware<ToolDefaultFileMiddleware>(fileProvider, path)
-            .UseMiddleware<ToolOptionsFileMiddleware>(path)
-            .UseMiddleware<ToolStaticFileMiddleware>(fileProvider, path)
-            .UseMiddleware<HttpGetMiddleware>(schemaNameOrDefault)
-            .Use(_ => context =>
+            .Use<ToolDefaultFileMiddleware>(fileProvider, path)
+            .Use<ToolOptionsFileMiddleware>(path)
+            .Use<ToolStaticFileMiddleware>(fileProvider, path)
+            .Use<HttpGetMiddleware>(schemaNameOrDefault)
+            .Use(next => ctx =>
             {
-                context.Response.StatusCode = 404;
-                return Task.CompletedTask;
+                ctx.Response.StatusCode = 404;
+
+                return next(ctx);
             });
 
-        return new GraphQLEndpointConventionBuilder(
-            endpointRouteBuilder
-                .Map(pattern, requestPipeline.Build())
-                .WithDisplayName("Hot Chocolate GraphQL Pipeline"));
+        endpointRouteBuilder = endpointRouteBuilder.Map(path, func);
+
+        return new GraphQLEndpointConventionBuilder(endpointRouteBuilder);
+        //.WithDisplayName("Hot Chocolate GraphQL Pipeline"));
     }
 
     /// <summary>
@@ -352,7 +353,7 @@ public static class EndpointRouteBuilderExtensions
 
         RoutePattern pattern = Parse(toolPath.ToString() + "/{**slug}");
         IApplicationBuilder requestPipeline = endpointRouteBuilder.CreateApplicationBuilder();
-        IFileProvider fileProvider = CreateFileProvider();
+        var fileProvider = CreateFileProvider();
 
         requestPipeline
             .UseCancellation()

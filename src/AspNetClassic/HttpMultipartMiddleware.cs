@@ -152,23 +152,23 @@ public sealed class HttpMultipartMiddleware : HttpPostMiddlewareBase
     {
         var pathToFileMap = new Dictionary<string, IFile>();
 
-        foreach ((string filename, string[] objectPaths) in map)
+        foreach (var filePair in map)
         {
-            if (objectPaths is null || objectPaths.Length < 1)
+            if (filePair.Value is null || filePair.Value.Length < 1)
             {
-                throw ThrowHelper.HttpMultipartMiddleware_NoObjectPath(filename);
+                throw ThrowHelper.HttpMultipartMiddleware_NoObjectPath(filePair.Key);
             }
 
-            IFormFile? file = filename is { Length: > 0 }
-                ? files.GetFile(filename)
+            IFormFile? file = filePair.Key is { Length: > 0 }
+                ? files.GetFile(filePair.Key)
                 : null;
 
             if (file is null)
             {
-                throw ThrowHelper.HttpMultipartMiddleware_FileMissing(filename);
+                throw ThrowHelper.HttpMultipartMiddleware_FileMissing(filePair.Key);
             }
 
-            foreach (var objectPath in objectPaths)
+            foreach (var objectPath in filePair.Value)
             {
                 pathToFileMap.Add(objectPath, new UploadedFile(file));
             }
@@ -187,18 +187,18 @@ public sealed class HttpMultipartMiddleware : HttpPostMiddlewareBase
                 HttpMultipartMiddleware_InsertFilesIntoRequest_VariablesImmutable);
         }
 
-        foreach ((string objectPath, IFile file) in fileMap)
+        foreach (var file in fileMap)
         {
-            var path = VariablePath.Parse(objectPath);
+            var path = VariablePath.Parse(file.Key);
 
             if (!mutableVariables.TryGetValue(path.Key.Value, out var value))
             {
-                throw ThrowHelper.HttpMultipartMiddleware_VariableNotFound(objectPath);
+                throw ThrowHelper.HttpMultipartMiddleware_VariableNotFound(file.Key);
             }
 
             if (path.Key.Next is null)
             {
-                mutableVariables[path.Key.Value] = new FileValueNode(file);
+                mutableVariables[path.Key.Value] = new FileValueNode(file.Value);
                 continue;
             }
 
@@ -208,10 +208,10 @@ public sealed class HttpMultipartMiddleware : HttpPostMiddlewareBase
             }
 
             mutableVariables[path.Key.Value] = RewriteVariable(
-                objectPath,
+                file.Key,
                 path.Key.Next,
                 value,
-                new FileValueNode(file));
+                new FileValueNode(file.Value));
         }
     }
 
